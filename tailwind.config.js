@@ -24,7 +24,9 @@ module.exports = {
       colors: {
         primary: '#131424',
         secondary: '#393A47',
-        accent: '#F13024',
+        accent: '#07f9a2', // '#F13024',
+        redpinkAccent: '#fd0a54',
+
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
@@ -37,6 +39,8 @@ module.exports = {
       },
       fontFamily: {
         sora: [`var(--font-sora)`, 'sans-serif'],
+        permanentMarker: [`var(--font-permanentMarker)`, 'sans-serif'],
+        longCang: [`var(--font-longCang)`, 'sans-serif'],
       },
     },
   },
