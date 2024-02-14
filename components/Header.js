@@ -19,7 +19,7 @@ const Header = () => {
           <Link href={'/'}>
             <div className='relative flex items-center'>
               <Image
-                src={'/Kurious-Logo-white clear bk.png'}
+                src={'/Kurious-Logo-White-clear-bk.png'}
                 width={60}
                 height={48}
                 alt=''
