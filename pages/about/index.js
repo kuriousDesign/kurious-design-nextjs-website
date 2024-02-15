@@ -37,9 +37,8 @@ const About = () => {
     {
       title: 'credentials',
       info: [
-        { title: 'Web Development - ABC University, LA, CA', stage: '2011', key: 'cred1' },
-        { title: 'Computer Science Diploma - AV Technical Institute', stage: '2009', key: 'cred2' },
-        { title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA', stage: '2006', key: 'cred3' },
+        { title: 'Master of Mechatronics Engineering - Universitaet Duisburg-Essen, Duisburg, NRW, Deutschland', stage: '2012', key: 'cred1' },
+        { title: 'Bachelor of Mechanical Engineering - The Ohio State University, Columbus, OH', stage: '2010', key: 'cred2' },
       ],
     },
   ];
