@@ -31,7 +31,6 @@ const Layout = ({ children }) => {
     <div
       className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang relative`}
     >
-      <TopLeftImg />
       <Nav />
       <Header />
       {children}

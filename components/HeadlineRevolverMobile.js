@@ -20,18 +20,18 @@ const HeadlineRevolver = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen overflow-hidden">
+    <div className="flex items-center justify-center">
       <div className="relative w-full">
         {headlines.map((headline, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: index === activeIndex ? 1 : 0, x: index % 2 === 0 ? 0 : -20 }}
-            animate={{ opacity: index === activeIndex ? 1 : 0, x: index === activeIndex ? 0 : (index % 2 === 0 ? 0 : -20) }}
+            initial={{ opacity: index === activeIndex ? 1 : 0, x: index % 2 === 0 ? 0 : -10 }}
+            animate={{ opacity: index === activeIndex ? 1 : 0, x: index === activeIndex ? 0 : (index % 2 === 0 ? 0 : -10) }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-redpinkAccent"
+            className="text-3xl font-bold text-redpinkAccent font-permanentMarker"
             style={{
               zIndex: index === activeIndex ? 1 : 0,
-              textAlign: 'left',
+              textAlign: 'center',
             }}
           >
             <motion.div

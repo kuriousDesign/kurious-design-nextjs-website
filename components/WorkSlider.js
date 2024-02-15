@@ -5,11 +5,11 @@ export const workSlider = {
       images: [
         {
           title: 'boomblebee',
-          path: '/thumb1.jpg',
+          path: '/thumb_boomblebee.jpg',
         },
         {
           title: 'shark hole',
-          path: '/thumb2.jpg',
+          path: '/thumb_sharkhole.jpg',
         },
         {
           title: 'urbanputt course',
