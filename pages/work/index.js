@@ -7,6 +7,7 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
+
 const Work = () => {
   return (
     <div className='h-full bg-primary/30 py-36 flex items-center'>
@@ -22,17 +23,16 @@ const Work = () => {
               exit='hidden'
               className='h2 xl:mt-12 font-permanentMarker font-light'
             >
-              My work <span className='text-accent font-permanentMarker font-light'>.</span>
+              MY WORK <span className='font-permanentMarker text-redpinkAccent font-light'>.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-permanentMarker font-thin'
+              className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-thin'
             >
-              My work. Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              A collection of some of my favorite projects. A nice mix of my background experience.
             </motion.p>
           </div>
 
@@ -54,3 +54,5 @@ const Work = () => {
 };
 
 export default Work;
+
+

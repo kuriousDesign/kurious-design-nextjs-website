@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
 
 // variants
 import { fadeIn } from '../variants';
+import HeadlineRevolver from '../components/HeadlineRevolver';
+import HeadlineRevolverMobile from '../components/HeadlineRevolverMobile';
 
 const Home = () => {
   return (
@@ -26,8 +28,9 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            <span className='text-redpinkAccent'> Art</span>
+            <span> meets </span>
+            <span className='text-redpinkAccent'> Robotics</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -37,10 +40,10 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Let us help design your next interactive creation and inject some robotic horsepower.
+            Who said engineers can&apos;t be artists?
           </motion.p>
+          <HeadlineRevolverMobile/>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
             <ProjectsBtn />
@@ -59,7 +62,7 @@ const Home = () => {
       {/* image */}
       <div className='w-[1200px] h-full absolute right-0 bottom-0'>
         {/* bg img */}
-        <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
+        <div className='bg-none xl:bg-ufo2 xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
         {/* particles */}
         <ParticlesContainer />
         {/* avatar img */}

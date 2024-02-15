@@ -30,9 +30,11 @@ module.exports = {
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
+        ufo2: 'url("/ufo2.jpg")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
+        kuriousLogo: 'url("/Kurious-Logo-Black-large.png")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
