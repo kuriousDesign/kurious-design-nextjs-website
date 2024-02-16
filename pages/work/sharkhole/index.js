@@ -2,11 +2,11 @@ import ProjectPage from "../../../components/ProjectPage";
 import { ProjectId, projectMap } from "../../../copy/ProjectData";
 
 
-const BoombleBeePage = () => {
-    const projectData = projectMap.get(ProjectId.BOOMBLEBEE);
+const SharkHolePage = () => {
+    const projectData = projectMap.get(ProjectId.SHARKHOLE);
     return (
         <ProjectPage projectData={projectData} />
     );
 };
 
-export default BoombleBeePage;
+export default SharkHolePage;

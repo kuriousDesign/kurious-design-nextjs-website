@@ -1,8 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
+import YouTube from "react-youtube";
 
-const LazyYoutube = ({ videoId }) => {
+const LazyYoutube = ({ videoId, height=300, width=400 }) => {
   const [load, setLoad] = useState(false);
   const videoRef = useRef(null);
+  const opts = { 
+    height: height.toString(), 
+    width: width.toString(), 
+    playerVars: { 
+      autoplay: 1, 
+    }, 
+  }; 
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -24,9 +32,9 @@ const LazyYoutube = ({ videoId }) => {
   return (
     <div ref={videoRef}>
       {load ? (
-        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <YouTube videoId={videoId} ref={videoRef} opts={opts}/>
       ) : (
-        <div>Loading...</div>
+        <div className={`w-[${width} h-${height}] bg-gray-700`}>Loading...</div>
       )}
     </div>
   );
