@@ -3,6 +3,7 @@ import Bulb from './Bulb';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import LazyYoutube from "./LazyYoutube";
+import Link from "next/link";
 
 const projectDataPage = ({ projectData }) => {
   return (
@@ -28,7 +29,13 @@ const projectDataPage = ({ projectData }) => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-thin'
             >
-              {projectData.quickBlurb}
+              <div>
+                {projectData.quickBlurb}
+                {/* Use Link component for the YouTube playlist link */}
+                <div className="mt-4">
+                  <a href={projectData.youtubePlaylistUrl} className="text-blue-500 hover:text-blue-700 cursor-pointer">YouTube Playlist</a>
+                </div>
+              </div>
             </motion.p>
           </div>
           {/* youtube */}
