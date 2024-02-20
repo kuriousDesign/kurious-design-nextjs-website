@@ -33,7 +33,7 @@ const projectDataPage = ({ projectData }) => {
                 {projectData.quickBlurb}
                 {/* Use Link component for the YouTube playlist link */}
                 <div className="mt-4">
-                  <a href={projectData.youtubePlaylistUrl} className="text-blue-500 hover:text-blue-700 cursor-pointer">YouTube Playlist</a>
+                  <a href={projectData.youtubePlaylistUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 cursor-pointer">YouTube Playlist</a>
                 </div>
               </div>
             </motion.p>

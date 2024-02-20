@@ -36,7 +36,7 @@ const HeadlineRevolver = () => {
             initial={{ opacity: index === activeIndex ? 1 : 0, y: index === activeIndex ? 0 : 20 }}
             animate={{ opacity: index === activeIndex ? 1 : 0, y: index === activeIndex ? 0 : 20 }}
             transition={{ duration: 0.5, delay: index === activeIndex ? 0.5 : 0 }}
-            className="mb-2"
+            className="mb-2 font-gothamBook"
           >
             {headline.text}
           </motion.div>

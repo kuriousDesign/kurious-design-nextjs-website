@@ -10,7 +10,7 @@ import { fadeIn } from '../../variants';
 
 const Work = () => {
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
+    <div className='h-full bg-slate-950 py-36 flex items-center'>
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -30,7 +30,7 @@ const Work = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-thin'
+              className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-thin font-gothamBook'
             >
               A collection of some of my favorite projects. A nice mix of my background experience.
             </motion.p>

@@ -76,6 +76,22 @@ export interface ProjectData {
 // Map to store project data by project ID
 export const projectMap: Map<ProjectId, ProjectData> = new Map([
   [
+    ProjectId.STREETARTMURALE,
+    {
+      title: "Interactive Street Art Murale",
+      thumbUrl: "/thumb_interactivestreetartmurale.jpg",
+      quickBlurb: "The intersection of computer vision, video game animation, projection mapping and painted murale.",
+      youtubeEmbedId: "D02ehLxhhyo",
+      youtubePlaylistUrl: "https://youtube.com/playlist?list=PLy1rmiokprEANgjsLdYJ7PaOGlIK7EOEV&si=4DotRx6gWsyGisrJ",
+      bgColor: "#FFFFFF",
+      techTags: [TechId.COMPUTERVISION, TechId.PROJECTIONMAPPING],
+      taskTags: [TaskId.PROCESSCONTROLDEV, TaskId.FIRMWAREDEV, TaskId.CUSTOMERTRAINING],
+      toolTags: [ToolId.ROS2, ToolId.PYGAME, ToolId.MEDIAPIPE],
+      description: "Ever been next to a murale that was so vibrant you wanted to play with it. Well that was the idea here, I partnered with a street are muralist from Buenos Aires to create an exhibit for drunken bar goers and kids to enjoy.",
+      comments: "I really enjoyed this project, because it augments classical art techniques; not replace. I have a great appreciation for art techniques that have been around long before the computer."
+    },
+  ],
+  [
     ProjectId.BOOMBLEBEE,
     {
       title: "The BoombleBee",
@@ -123,21 +139,6 @@ export const projectMap: Map<ProjectId, ProjectData> = new Map([
       comments: "",
     },
   ],
-  [
-    ProjectId.STREETARTMURALE,
-    {
-      title: "Interactive Street Art Murale",
-      thumbUrl: "/thumb_interactivestreetartmurale.jpg",
-      quickBlurb: "The intersection of computer vision, video game animation, projection mapping and painted murale.",
-      youtubeEmbedId: "D02ehLxhhyo",
-      youtubePlaylistUrl: "https://youtube.com/playlist?list=PLy1rmiokprEANgjsLdYJ7PaOGlIK7EOEV&si=4DotRx6gWsyGisrJ",
-      bgColor: "#FFFFFF",
-      techTags: [TechId.COMPUTERVISION, TechId.PROJECTIONMAPPING],
-      taskTags: [TaskId.PROCESSCONTROLDEV, TaskId.FIRMWAREDEV, TaskId.CUSTOMERTRAINING],
-      toolTags: [ToolId.ROS2, ToolId.PYGAME, ToolId.MEDIAPIPE],
-      description: "Ever been next to a murale that was so vibrant you wanted to play with it. Well that was the idea here, I partnered with a street are muralist from Buenos Aires to create an exhibit for drunken bar goers and kids to enjoy.",
-      comments: "I really enjoyed this project, because it augments classical art techniques; not replace. I have a great appreciation for art techniques that have been around long before the computer."
-    },
-  ],
+
   // Add more projects as needed
 ]);

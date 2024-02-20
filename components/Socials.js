@@ -1,33 +1,18 @@
 import Link from 'next/link';
-import {
-  RiYoutubeLine,
-  RiInstagramLine,
-  RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
-} from 'react-icons/ri';
+import { AiFillLinkedin, AiFillYoutube, AiOutlineInstagram } from "react-icons/ai";
 
 const Socials = () => {
+  const iconSize = '32px'; // Adjust the size as needed
   return (
-    <div className='hidden xl:flex items-center gap-x-5 text-lg'>
+    <div className=' fixed bottom-2 left-1/2 -translate-x-1/2 w-[200px] h-[80px] flex flex-row justify-between items-center'>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiYoutubeLine />
+        <AiFillYoutube size={iconSize} />
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiFacebookLine />
+        <AiOutlineInstagram size={iconSize} />
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiInstagramLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiDribbbleLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiBehanceLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiPinterestLine />
+        <AiFillLinkedin size={iconSize} />
       </Link>
     </div>
   );

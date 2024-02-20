@@ -1,5 +1,15 @@
 // fonts
 import { Sora, Permanent_Marker, Long_Cang } from '@next/font/google';
+// import GothamBook from '../public/fonts/GothamBook.otf'
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `pages`
+const gothamBook = localFont({ 
+  src: '../public/fonts/GothamBook.otf',
+  variable: '--font-gothamBook',
+  weight: '400' 
+})
+
 
 // font settings
 const sora = Sora({
@@ -21,19 +31,21 @@ const longCang = Long_Cang({
   weight: ['400'],
 });
 
-// components
-import Nav from '../components/Nav';
+
 import Header from '../components/Header';
-import TopLeftImg from '../components/TopLeftImg';
+
+// components
+import Socials from '../components/Socials';
 
 const Layout = ({ children }) => {
   return (
     <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang relative`}
+      className={`page bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
-      <Nav />
       <Header />
+      <Socials />
       {children}
+      
     </div>
   );
 };

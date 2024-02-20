@@ -7,7 +7,7 @@ const Avatar = () => {
       <Image
         src={'/Kurious-Logo-White-clear-bk.png'}
         width={737}
-        height={678}
+        height={737}
         alt=''
         className='translate-z-0 w-full h-full'
       />

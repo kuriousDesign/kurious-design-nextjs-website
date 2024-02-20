@@ -11,8 +11,9 @@
   "dependencies": {
     "@fontsource/long-cang": "^5.0.11",
     "@fontsource/permanent-marker": "^5.0.8",
-    "@next/font": "^13.4.4",
+    "@next/font": "^13.5.6",
     "framer-motion": "^10.12.16",
+    "hamburger-react": "^2.5.0",
     "next": "13.4.3",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
@@ -28,6 +29,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "file-loader": "^6.2.0",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
   }

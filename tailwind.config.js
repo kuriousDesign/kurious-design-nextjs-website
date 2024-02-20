@@ -43,6 +43,7 @@ module.exports = {
         sora: [`var(--font-sora)`, 'sans-serif'],
         permanentMarker: [`var(--font-permanentMarker)`, 'sans-serif'],
         longCang: [`var(--font-longCang)`, 'sans-serif'],
+        gothamBook: [`var(--font-gothamBook)`, 'sans-serif'],
       },
     },
   },

@@ -4,22 +4,21 @@ export const testimonialSlider = [
     image: '/t-avt-1.png',
     name: 'Anne Smith',
     position: 'Customer',
-    message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+    message: ' this guy sucks... DNH'
   },
   {
     image: '/t-avt-2.png',
     name: 'Jane Doe',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+    'who gives a shit about a mechanical shark? plus it bit my kid'
   },
   {
     image: '/t-avt-3.png',
     name: 'Jhon Doe',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+    'was not clear at any time this guy had a fucking clue what he was doing, he just kept saying "its a metaphore". frustrated to say the least '
   },
 ];
 

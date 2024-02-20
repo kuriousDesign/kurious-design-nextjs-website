@@ -13,7 +13,7 @@ import { useRouter } from 'next/router';
 const WorkSlider = () => {
   const router = useRouter();
   const pathname = router.pathname;
-
+  
   return (
     <Swiper
       spaceBetween={10}
@@ -24,7 +24,7 @@ const WorkSlider = () => {
       {Array.from(projectMap.entries()).map(([projectId, projectData], index) => (
         <SwiperSlide key={index}>
           <div className='grid grid-cols-1 grid-rows-1 gap-4 cursor-pointer'>
-            <Link href={`${pathname}/${projectId}`} key={index}>
+            <Link href={`/work/${projectId.toString()}`} key={index}>
               <div className='relative rounded-lg overflow-hidden flex items-center justify-center group'>
                 <div className='flex items-center justify-center relative overflow-hidden group'>
                   <Image src={projectData.thumbUrl} width={500} height={300} alt='' />

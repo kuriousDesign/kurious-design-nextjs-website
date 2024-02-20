@@ -28,7 +28,7 @@ const HeadlineRevolver = () => {
             initial={{ opacity: index === activeIndex ? 1 : 0, x: index % 2 === 0 ? 0 : -10 }}
             animate={{ opacity: index === activeIndex ? 1 : 0, x: index === activeIndex ? 0 : (index % 2 === 0 ? 0 : -10) }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-redpinkAccent font-permanentMarker"
+            className="text-3xl font-bold text-redpinkAccent font-permanentMarker text-opacity-80"
             style={{
               zIndex: index === activeIndex ? 1 : 0,
               textAlign: 'center',
@@ -38,7 +38,7 @@ const HeadlineRevolver = () => {
               initial={{ opacity: index === activeIndex ? 1 : 0, y: index === activeIndex ? 0 : 20 }}
               animate={{ opacity: index === activeIndex ? 1 : 0, y: index === activeIndex ? 0 : 20 }}
               transition={{ duration: 0.5, delay: index === activeIndex ? 0.5 : 0 }}
-              className="mb-2"
+              className="mb-2 font-permanentMarker"
             >
               {headline.text}
             </motion.div>
@@ -46,7 +46,7 @@ const HeadlineRevolver = () => {
               initial={{ opacity: index === activeIndex ? 1 : 0 }}
               animate={{ opacity: index === activeIndex ? 1 : 0 }}
               transition={{ duration: 0.5, delay: index === activeIndex ? 0.8 : 0 }}
-              className="text-sm text-blue-300"
+              className="font-gothamBook text-[16px] text-blue-300"
             >
               {headline.blurb}
             </motion.div>
