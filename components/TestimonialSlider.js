@@ -18,7 +18,7 @@ export const testimonialSlider = [
     name: 'Jhon Doe',
     position: 'Customer',
     message:
-    'was not clear at any time this guy had a fucking clue what he was doing, he just kept saying "its a metaphore". frustrated to say the least '
+    'was not clear at any time this guy had a fucking clue what he was doing, he just kept saying "its a metaphore" and kept yelling "SCOPE CREEP" ...frustrated to say the least '
   },
 ];
 
