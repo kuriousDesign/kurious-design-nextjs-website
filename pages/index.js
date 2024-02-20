@@ -55,7 +55,7 @@ const Home = () => {
       <div className='absolute w-full xl:w-1/3 h-1/3 xl:h-full right-0 bottom-0 bg-gradient-to-b from-blue-950 to-blue-500'>
         {/* particles */}
         <ParticlesContainer />
-        <div className="abslute hidden xl:block xl:left-7 xl:top-56">
+        <div className="absolute hidden xl:block left-7 top-56">
           <HeadlineRevolver/>
         </div>
         <div className="absolute xl:hidden left-0 top-6 w-full">
