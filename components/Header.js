@@ -62,7 +62,7 @@ const Header = () => {
         {/* portfolio btn*/}
         {!isWork && (
           <Link href={'/work'}>
-            <button className="absolute right-10 top-1/2 -translate-y-1/2 h-[45px] w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
+            <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 h-[37px] w-[90px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
               PORTFOLIO
             </button>
           </Link>

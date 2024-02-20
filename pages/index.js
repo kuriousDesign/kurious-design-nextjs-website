@@ -11,16 +11,17 @@ import { motion } from 'framer-motion';
 
 // variants
 import { fadeIn } from '../variants';
-import HeadlineRevolverMobile from '../components/HeadlineRevolverMobile';
+import { HeadlineRevolverMobile, HeadlineRevolver } from '../components/HeadlineRevolverMobile';
+import HeadlineRevolverM from '../components/HeadlineRevolver';
 
 const Home = () => {
   return (
     <div className='h-full w-full'>
       {/* left chunk */}
-      <div className='overflow-hidden w-2/3 h-full absolute left-0 top-0 '>
+      <div className='overflow-hidden w-full xl:w-2/3 h-2/3 xl:h-full absolute left-0 top-0 '>
         {/* bg img */}
-        <div className='bg-ufo2 absolute mix-blend-color-dodge w-full h-full right-0 bg-no-repeat '/>
-        <div className='absolute text-center xl:text-left flex flex-col justify-center left-36 bottom-[10%] opacity-70'>
+        <div className='bg-ufo2 absolute mix-blend-color-dodge object-scale-down w-full h-full left-0 bg-no-repeat '/>
+        <div className='absolute text-center xl:text-left flex flex-col justify-center left-1/2 xl:left-36 transform -translate-x-1/2 xl:translate-x-0 bottom-2 xl:bottom-[10%] opacity-70'>
             {/* title */}
             <motion.h1
               variants={fadeIn('down', 0.2)}
@@ -39,7 +40,7 @@ const Home = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 font-gothamBook text-blue-400 text-xl font-semibold'
+              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 font-gothamBook text-blue-400 text-lg xl:text-xl font-semibold'
             >
               Let me help design your next interactive creation and inject some robotic horsepower.
               Who said engineers can&apos;t be artists?
@@ -50,11 +51,14 @@ const Home = () => {
         </div>
       </div>
 
-      {/* right chunk */}
-      <div className='absolute w-1/3 h-full right-0 top-0 bg-gradient-to-b from-blue-950 to-blue-500'>
+      {/* right chunk or bottom chunk for mobile */}
+      <div className='absolute w-full xl:w-1/3 h-1/3 xl:h-full right-0 bottom-0 bg-gradient-to-b from-blue-950 to-blue-500'>
         {/* particles */}
         <ParticlesContainer />
-        <div className="relative left-7 top-56">
+        <div className="abslute hidden xl:block xl:left-7 xl:top-56">
+          <HeadlineRevolver/>
+        </div>
+        <div className="absolute xl:hidden left-0 top-6 w-full">
           <HeadlineRevolverMobile/>
         </div>
       </div>

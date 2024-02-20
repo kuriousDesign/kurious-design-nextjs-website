@@ -9,7 +9,7 @@ const headlines = [
   { text: "Remember!", blurb: "contractors are real people too" },
 ];
 
-const HeadlineRevolver = () => {
+const HeadlineRevolverM = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -54,4 +54,4 @@ const HeadlineRevolver = () => {
   );
 };
 
-export default HeadlineRevolver;
+export default HeadlineRevolverM;
