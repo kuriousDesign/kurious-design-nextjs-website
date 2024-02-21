@@ -11,14 +11,14 @@ export const testimonialSlider = [
     name: 'Jane Doe',
     position: 'Customer',
     message:
-    'who gives a shit about a mechanical shark? plus it bit my kid'
+    'who cares about a mechanical shark? plus it bit my kid'
   },
   {
     image: '/t-avt-3.png',
     name: 'Jhon Doe',
     position: 'Customer',
     message:
-    'was not clear at any time this guy had a fucking clue what he was doing, he just kept saying "its a metaphore" and kept yelling "SCOPE CREEP" ...frustrated to say the least '
+    'was not clear at any time this guy had a clue what he was doing, he just kept saying "its a metaphore" and kept yelling "SCOPE CREEP" ...frustrated to say the least '
   },
 ];
 
