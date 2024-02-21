@@ -1,69 +1,81 @@
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 // next image
 import Image from 'next/image';
-
-// components
-import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
-
-// framer motion
 import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
+
 
 // variants
-import { fadeIn } from '../variants';
-import { HeadlineRevolverMobile, HeadlineRevolver } from '../components/HeadlineRevolverMobile';
-import HeadlineRevolverM from '../components/HeadlineRevolver';
+const imageVariants = {
+  initial: {
+    x: '100%',
+    width: '100%',
+    color: 'rgb(255,0,0)',
+  },
+  animate: {
+    x: '-100%',
+    width: '100%',
+    color: 'rgb(255,0,0)',
+  },
+  exit: {
+    x: ['0%', '100%'],
+    width: ['0%', '100%'],
+    color: ['rgb(255,0,0)', 'rgb(255,0,0)'],
+  },
+};
 
-const Home = () => {
+const Splash = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(true);
+      console.log('visibility');
+      clearInterval(interval);
+    }, 3000); // Change headline every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className='h-full w-full'>
-      {/* left chunk */}
-      <div className='overflow-hidden w-full xl:w-2/3 h-2/3 xl:h-full absolute left-0 top-0 '>
-        {/* bg img */}
-        <div className='bg-ufo2 absolute mix-blend-color-dodge object-scale-down w-full h-full left-0 bg-no-repeat '/>
-        <div className='absolute text-center xl:text-left flex flex-col justify-center left-1/2 xl:left-36 transform -translate-x-1/2 xl:translate-x-0 bottom-2 xl:bottom-[10%] opacity-70'>
-            {/* title */}
-            <motion.h1
-              variants={fadeIn('down', 0.2)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='h1 font-permanentMarker'
-            >
-              <span className='text-redpinkAccent'> Art</span>
-              <span className=''> meets </span>
-              <span className='text-redpinkAccent'> Robotics</span>
-            </motion.h1>
-            {/* subtitle */}
-            <motion.p
-              variants={fadeIn('down', 0.3)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 font-gothamBook text-blue-400 text-lg xl:text-xl font-semibold'
-            >
-              Let me help design your next interactive creation and inject some robotic horsepower.
-              Who said engineers can&apos;t be artists?
-            </motion.p>
-
-    
-          {/* text */}
-        </div>
+    <div className='w-full h-full bg-white flex'>
+      <div className='w-full my-auto h-auto pb-20'>
+        <motion.div
+          variants={imageVariants}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          transition={{ delay: 3.0, duration: 3.0, ease: 'easeIn' }}
+          className='w-10/12 mx-auto max-w-[800px]'
+        >
+          <Image
+            src={'/Kurious-Logo-Black-clear-bk.png'}
+            width={7637}
+            height={7786}
+            alt=''
+          />
+        </motion.div>
       </div>
 
-      {/* right chunk or bottom chunk for mobile */}
-      <div className='absolute w-full xl:w-1/3 h-1/3 xl:h-full right-0 bottom-0 bg-gradient-to-b from-blue-950 to-blue-500'>
-        {/* particles */}
-        <ParticlesContainer />
-        <div className="absolute hidden xl:block left-7 top-56">
-          <HeadlineRevolver/>
+
+      
+        <div className='absolute w-full bottom-5 flex justify-center gap-10'>
+          <Link href={'/home'}>
+            <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-transparent text-black text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue hover:text-blue hover:scale-105]">
+              HOME
+            </button>
+          </Link>
+        {isVisible && (
+          <Link href={'/home'}>
+            <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-red-500 hover:ring-red-500 hover:scale-105 animate-[bounce_0.5s_ease-in-out_infinite]">
+              DON&apos;T TOUCH
+            </button>
+          </Link>
+          )}
         </div>
-        <div className="absolute xl:hidden left-0 top-6 w-full">
-          <HeadlineRevolverMobile/>
-        </div>
-      </div>
+      
     </div>
   );
 };
 
-export default Home;
+export default Splash;

@@ -26,6 +26,9 @@ module.exports = {
         secondary: '#393A47',
         accent: '#07f9a2', // '#F13024',
         redpinkAccent: '#fd0a54',
+        lightblue: 'rgb(92,148,255)',
+        blue: 'rgb(23,37,255)',
+        darkblue: 'rgb(23,37,84)',
 
       },
       backgroundImage: {

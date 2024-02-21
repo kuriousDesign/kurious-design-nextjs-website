@@ -36,14 +36,40 @@ import Header from '../components/Header';
 
 // components
 import Socials from '../components/Socials';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  const [isSplash, setIsSplash] = useState(router.pathname === '/');
+  // const isSplash = router.pathname === '/';
+  useEffect(() => {
+    const handleRouteChange = () => {
+      console.log('router.pathname');
+      console.log(router.pathname);
+      setIsSplash(router.pathname === '/');
+    };
+    console.log('router.pathname');
+    console.log(router.pathname);
+
+    // handleRouteChange();
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      // router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
   return (
     <div
       className={`page bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
-      <Header />
-      <Socials />
+      {!isSplash && (
+        <>
+          <Header />
+          <Socials />
+        </>
+      )}
+
       {children}
       
     </div>
