@@ -2,12 +2,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projectMap } from '../copy/ProjectData';
 import { useRouter } from 'next/router';
+import WorkSlide from './WorkSlide';
 
 
 const WorkSlider = () => {
@@ -16,37 +17,44 @@ const WorkSlider = () => {
   
   return (
     <Swiper
-      spaceBetween={10}
-      pagination={{ clickable: true }}
-      modules={[Pagination]}
-      className='h-[280px] sm:h-[480px]'
+      navigation={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Navigation, Pagination]}
+      className='h-[500px]'
     >
-      {Array.from(projectMap.entries()).map(([projectId, projectData], index) => (
+    {Array.from(projectMap.entries()).map(([projectId, projectData], index) => {
+      return (
         <SwiperSlide key={index}>
-          <div className='grid grid-cols-1 grid-rows-1 gap-4 cursor-pointer'>
-            <Link href={`/work/${projectId.toString()}`} key={index}>
-              <div className='relative rounded-lg overflow-hidden flex items-center justify-center group'>
-                <div className='flex items-center justify-center relative overflow-hidden group'>
-                  <Image src={projectData.thumbUrl} width={500} height={300} alt='' />
-                  <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700'></div>
-                  <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300'>
-                    <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
-                      <div className='delay-100'>SEE </div>
-                      <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
-                        {projectData.title.toUpperCase()}
-                      </div>
-                      <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200'>
-                        <BsArrowRight />
-                      </div>
-                    </div>
+          <Link href={`/work/${projectId.toString()}`} key={index}>
+            <div className='flex flex-col items-center md:flex-row gap-x-8 h-full px-16'>
+              {/* avatar, name, position */}
+              <div className='w-full max-w-[500px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0'>
+                <div className='flex flex-col justify-center text-center w-full h-full'>
+                            
+                  {/* image */}
+                  <div className='mb-2 mx-auto w-[60vw] h-[60vw] rounded-full overflow-hidden'>
+                    <Image className=' w-full object-cover h-full' src={projectData.thumbUrl} width={4032} height={3022} alt='' />
                   </div>
+                  {/* title */}
+                  <div className='text-lg pt-4 text-redpinkAccent font-permanentMarker'>{projectData.title}</div>   
+                  <div className='xl:text-lg text-center md:text-left font-gothamBook text-gray-400'>
+                  {projectData.quickBlurb}
+                </div>
                 </div>
               </div>
-            </Link>
-          </div>
+              {/* quote & message */}
+              <div className='flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20'>
+                {/* message */}
+
+              </div>
+            </div>
+          </Link>
         </SwiperSlide>
-      ))}
-    </Swiper>
+      );
+    })}
+  </Swiper>
   );
 };
 

@@ -5,6 +5,7 @@ import Hamburger from 'hamburger-react'
 import { useState, useEffect } from 'react';
 import Nav from './Nav';
 import HeaderBackgroundMobile from './HeaderBackgroundMobile';
+import { motion } from 'framer-motion'
 
 const Header = () => {
   const designText = 'D E S I G N';
@@ -68,7 +69,20 @@ const Header = () => {
                 priority={true}
               />
               <p className='absolute left-14 top-3 font-permanentMarker text-4xl text-white '>urious</p>
-              <p className='absolute left-9 top-10 font-longCang whitespace-nowrap  text-xl text-red-500'>{designText}</p>
+              <motion.p
+                className='absolute left-9 top-10 font-longCang whitespace-nowrap  text-xl text-redpinkAccent'
+                animate={{
+                  color: ['#ff0a56','#da18f0','#1725ff'] // List of colors to cycle through
+                }}
+                transition={{
+                  duration: 34, // Duration of each color transition
+                  repeat: Infinity, // Repeat indefinitely
+                  repeatType: 'reverse' // Reverse direction after each cycle
+                }}
+              >
+                {designText}
+              </motion.p>
+              <p className='hidden absolute left-9 top-10 font-longCang whitespace-nowrap  text-xl text-red-500'>{designText}</p>
             </div>
           </Link>
         </div>

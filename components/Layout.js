@@ -31,15 +31,12 @@ const longCang = Long_Cang({
   weight: ['400'],
 });
 
-
 import Header from '../components/Header';
 
 // components
 import Socials from '../components/Socials';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import HeaderBackgroundMobile from './HeaderBackgroundMobile';
-import SocialsBackgroundMobile from './SocialsBackgroundMobile';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -65,12 +62,8 @@ const Layout = ({ children }) => {
     <div
       className={`page bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
-      {!isSplash && (
-        <>
-          <Header />
-          <Socials />
-        </>
-      )}
+      <Header />
+      <Socials />
       {children}
       
     </div>

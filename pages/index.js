@@ -59,7 +59,7 @@ const Splash = () => {
 
 
       
-        <div className='absolute w-full h-1/6 bottom-10 flex justify-center gap-10'>
+        <div className='absolute w-full h-1/6 bottom-10 flex justify-center gap-10 z-50'>
           <Link href={'/home'}>
             <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-transparent text-black text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue hover:text-blue hover:scale-105]">
               HOME

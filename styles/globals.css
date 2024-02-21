@@ -22,6 +22,16 @@
   color: #f13024;
 }
 
+button:focus, a:focus, Link:focus {
+  outline: none; /* Remove focus outline */
+  -webkit-tap-highlight-color: transparent; /* Disable tap highlight color for webkit browsers */
+}
+
+:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Disable tap highlight color for webkit browsers */
+}
+
 @layer base {
   body {
     @apply overflow-hidden leading-relaxed;
@@ -52,4 +62,5 @@
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
+
 }

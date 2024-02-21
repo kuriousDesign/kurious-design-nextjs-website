@@ -11,6 +11,10 @@ const projectDataPage = ({ projectData }) => {
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
+          {/* youtube */}
+          <div className="w-full mx-auto flex justify-center max-w-[600px] py-16">
+            <LazyYoutube videoId={projectData.youtubeEmbedId}/>
+          </div>
           {/* text */}
           <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
             <motion.h2
@@ -29,19 +33,16 @@ const projectDataPage = ({ projectData }) => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0 font-thin'
             >
-              <div>
+              <div className='text-gray-200 font-semibold font-gothamBook'>
                 {projectData.quickBlurb}
                 {/* Use Link component for the YouTube playlist link */}
-                <div className="mt-4">
+                <div className="mt-4 text-redpinkAccent">
                   <a href={projectData.youtubePlaylistUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 cursor-pointer">YouTube Playlist</a>
                 </div>
               </div>
             </motion.p>
           </div>
-          {/* youtube */}
-          <div className="w-full mx-auto flex justify-center max-w-[600px]">
-            <LazyYoutube videoId={projectData.youtubeEmbedId}/>
-          </div>
+
         </div>
       </div>
       <Bulb />
