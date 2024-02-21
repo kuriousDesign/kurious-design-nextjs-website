@@ -58,7 +58,7 @@ const Header = () => {
         </div>
         {/* logo */}
         <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[175px] h-auto'>
-          <Link href={'/'} >
+          <Link href={'/home'} >
             <div className='relative flex items-center w-auto '>
               <Image
                 src={'/Kurious-Logo-White-clear-bk.png'}

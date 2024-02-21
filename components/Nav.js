@@ -10,7 +10,7 @@ import {
 
 const iconSize = 30;
 export const navData = [
-  { name: 'home', path: '/', icon: <HiHome size={iconSize} /> },
+  { name: 'home', path: '/home', icon: <HiHome size={iconSize} /> },
   { name: 'about', path: '/about', icon: <HiUser size={iconSize} /> },
   { name: 'services', path: '/services', icon: <HiRectangleGroup size={iconSize} /> },
   { name: 'work', path: '/work', icon: <HiViewColumns size={iconSize} /> },
