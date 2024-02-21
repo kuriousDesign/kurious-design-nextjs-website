@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import Nav from './Nav';
 import HeaderBackgroundMobile from './HeaderBackgroundMobile';
 
-const Header = () => {
+const HeaderMobile = () => {
   const designText = 'D E S I G N';
   const router = useRouter();
   const pathname = router.pathname;
@@ -28,33 +28,22 @@ const Header = () => {
 
 
   return (
-    <header className='fixed z-30 w-full h-[100px] '>
+    <header className='fixed z-30 w-full h-[100px]'>
       {/* nav*/}
       {isOpen && (
         <Nav />
       )}
       <HeaderBackgroundMobile />
-      <div className='h-full w-full transform -translate-y-3'>
+      <div className='h-full w-full'>
         {/* nav hamburger */}
         <div className='absolute top-1/2 -translate-y-1/2 left-2 xl:left-7'>
-        <div className='hidden -z-10  xl:block xl:z-0'>
-          <Hamburger toggled={isOpen} toggle={setOpen} duration="0.4" distance="lg" direction="right"  rounded onToggle={toggled => {
-            if (toggled) {
-              // open a menu
-            } else {
-              // close a menu
-            }
-          }} />
-        </div>
-        <div className='xl:hidden'>
-          <Hamburger  size={20} toggled={isOpen} toggle={setOpen} duration="0.4" distance="lg" direction="right"  rounded onToggle={toggled => {
-            if (toggled) {
-              // open a menu
-            } else {
-              // close a menu
-            }
-          }} />
-        </div>
+        <Hamburger toggled={isOpen} toggle={setOpen} duration="0.4" distance="lg" direction="right"  rounded onToggle={toggled => {
+          if (toggled) {
+            // open a menu
+          } else {
+            // close a menu
+          }
+        }} />
         </div>
         {/* logo */}
         <div className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[175px] h-auto'>
@@ -74,22 +63,15 @@ const Header = () => {
         </div>
         {/* portfolio btn*/}
         {!isWork && (
-          <>
-            <Link className='hidden xl:block' href={'/work'}>
-              <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 xl:w-[130px] xl:h-[45px] rounded-full ring-2 ring-white bg-transparent text-white xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
-                PORTFOLIO
-              </button>
-            </Link>
-            <Link className='xl:hidden' href={'/work'}>
-              <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 w-[70px] h-[30px] rounded-full ring-2 ring-white bg-transparent text-white text-[6px] xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
-                PORTFOLIO
-              </button>
-            </Link>
-          </>
+          <Link href={'/work'}>
+            <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 h-[37px] w-[90px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
+              PORTFOLIO
+            </button>
+          </Link>
         )}
       </div>
     </header>
   );
 };
 
-export default Header;
+export default HeaderMobile;

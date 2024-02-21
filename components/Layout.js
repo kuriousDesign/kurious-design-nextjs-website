@@ -38,6 +38,8 @@ import Header from '../components/Header';
 import Socials from '../components/Socials';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import HeaderBackgroundMobile from './HeaderBackgroundMobile';
+import SocialsBackgroundMobile from './SocialsBackgroundMobile';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -69,7 +71,6 @@ const Layout = ({ children }) => {
           <Socials />
         </>
       )}
-
       {children}
       
     </div>
