@@ -8,13 +8,11 @@ const SocialsBackgroundMobile = () => {
   const diameter = '300px';
 
   return (
-    <div className="xl:hidden fixed bottom-0 left-0 h-1/3 w-full overflow-hidden z-10">
-      <div className={`absolute left-1/2 transform -translate-x-1/2 top-full -translate-y-[100px] w-[350px] h-[200px] rounded-full backdrop-filter backdrop-blur-lg bg-opacity-30 bg-black`}>
-      <svg className='filter backdrop-blur-sm opacity-60' width="350" height="200">
+    <div className="xl:hidden fixed bottom-0 left-0 h-[50px] w-full overflow-hidden z-10">
+      <div className={`absolute left-1/2 transform -translate-x-1/2 top-full -translate-y-[60px] w-[350px] h-[200px] rounded-full backdrop-filter backdrop-blur-lg bg-opacity-30 bg-black`}>
+        <svg className='filter backdrop-blur-sm opacity-60' width="350" height="200">
           <ellipse  cx="175" cy="100" rx="175" ry="100" fill="none" stroke="none" />
         </svg>
-
-
       </div>
     </div>
   );

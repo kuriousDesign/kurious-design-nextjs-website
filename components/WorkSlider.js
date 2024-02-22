@@ -30,11 +30,10 @@ const WorkSlider = () => {
           <Link href={`/work/${projectId.toString()}`} key={index}>
             <div className='flex flex-col items-center gap-x-8 h-full px-16'>
               {/* avatar, name, position */}
-              <div className='w-full max-w-[600px] flex flex-col items-center relative mx-auto justify-center pt-10'>
+              <div className='w-full max-w-[600px] flex flex-col items-center relative mx-auto justify-center pt-4'>
                 <div className='flex flex-col justify-center text-center w-full h-full '>
-                            
                   {/* image */}
-                  <div className='mb-2 mx-auto w-[60vw] h-[60vw] max-w-[350px] max-h-[350px] rounded-full overflow-hidden'>
+                  <div className='mb-2 mx-auto w-[50vw] h-[50vw] max-w-[350px] max-h-[350px] xl:max-w-[350px] rounded-full overflow-hidden aspect-w-1 aspect-h-1'>
                     <Image className=' w-full object-cover h-full' src={projectData.thumbUrl} width={4032} height={3022} alt='' />
                   </div>
                   {/* title */}
