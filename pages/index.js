@@ -49,30 +49,27 @@ const Splash = () => {
           className='w-10/12 mx-auto max-w-[800px]'
         >
           <Image
-            src={'/Kurious-Logo-Black-clear-bk.png'}
-            width={7637}
-            height={7786}
+            src={'/Kurious-Logo.jpg'}
+            width={999}
+            height={999}
             alt=''
           />
         </motion.div>
       </div>
-
-
-      
-        <div className='absolute w-full h-1/6 bottom-10 flex justify-center gap-10 z-50'>
+      <div className='absolute w-full h-auto bottom-10 xl:bottom-14 flex justify-center gap-10 z-50'>
+        <Link href={'/home'}>
+          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-transparent text-black text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue hover:text-blue hover:scale-105]">
+            HOME
+          </button>
+        </Link>
+        {isVisible && (
           <Link href={'/home'}>
-            <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-transparent text-black text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-blue hover:text-blue hover:scale-105]">
-              HOME
+            <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-red-500 hover:ring-red-500 hover:scale-105 animate-[bounce_0.5s_ease-in-out_infinite]">
+              DON&apos;T TOUCH
             </button>
           </Link>
-          {isVisible && (
-            <Link href={'/home'}>
-              <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-red-500 hover:ring-red-500 hover:scale-105 animate-[bounce_0.5s_ease-in-out_infinite]">
-                DON&apos;T TOUCH
-              </button>
-            </Link>
-          )}
-        </div>
+        )}
+      </div>
       
     </div>
   );

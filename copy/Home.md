@@ -33,3 +33,10 @@ Experiential Interior Design
 SynthesizedMotion: 
 
 Haunted Houses and Escape Rooms
+
+## VALUABLE SKILLS
+
+Electric Design and Schematics for 480/240/120 VAC and Low-Voltage DC. Safe electrical design that conforms with NFPA79 and NEC to ensure no fire hazards are created.
+
+System Integration Software - connecting multiple devices, controls, lights, computers, etc. together to work synchronously
+
