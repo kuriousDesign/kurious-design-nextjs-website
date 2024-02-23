@@ -1,2 +1,11 @@
 STATUS      DESCRIPTION
             make multiple splash page (all white background with x-ray looking logo, dark theme)
+
+
+
+
+            Splash page effect: fade from white to blaclight blue to expose elements that are orange and make them look vibrant.
+            Splash page looks like craigslist html and says, forgive me, i'm trying to learn how to code webpages. button looks basic
+                this will set the user's expectations low at the beginning.
+
+            Don't touch me button collapses kurious logo and then from the ashes you can revive the octopus if you keep tapping the screen.
