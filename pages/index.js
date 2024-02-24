@@ -71,7 +71,7 @@ const Splash = () => {
         </Link>
         {isVisible && (
           <button onClick={handleButtonClick} className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-red-500 hover:ring-red-500 hover:scale-105 animate-[bounce_1.5s_ease-in-out_infinite]">
-            DON'T TOUCH
+            DON&apos;T TOUCH
           </button>
         )}
       </div>
