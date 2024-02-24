@@ -52,7 +52,7 @@ const Splash = () => {
           animate='show'
           exit='hidden'
           transition={{ delay: 3.0, duration: 3.0, ease: 'easeIn' }}
-          className='relative w-[443px] m-auto max-w-[443px] transform scale-90 xl:scale-100'
+          className='relative w-[443px] m-auto max-w-[443px] transform scale-90 sm:scale-100 '
         >
           {displayStateReq === 0 && (
             <>
