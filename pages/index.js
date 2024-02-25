@@ -45,14 +45,14 @@ const Splash = () => {
 
   return (
     <div className='w-full h-full bg-blue flex'>
-      <div className='absolute top-1/2 transform -translate-y-1/2 left-0 w-full h-[500px] bg-red-600'>
+      <div className='absolute top-1/2 transform -translate-y-1/2 left-0 w-full h-[500px]'>
         <motion.div
           variants={imageVariants}
           initial='hidden'
           animate='show'
           exit='hidden'
           transition={{ delay: 3.0, duration: 3.0, ease: 'easeIn' }}
-          className='relative w-[443px] h-[397px] transform scale-90 sm:scale-100 bg-green-500 left-1/2 -translate-x-1/2  '
+          className='relative w-[443px] h-[397px] transform scale-90 sm:scale-100  left-1/2 -translate-x-1/2  '
         >
           {displayStateReq === 0 && (
             <>
