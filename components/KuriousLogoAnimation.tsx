@@ -64,14 +64,14 @@ export default function KuriousLogoAnimation({ displayStateReq = 0 }: Props) {
     return () => clearInterval(interval);
   }, [displayStateReq, displayState, imgIdx]);
 
-  const [images, setImages] = useState(imageListDown);
+  const [images, setImages] = useState(imageListUp);
 
   return (
     <>
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 p-0 m-0 ${index !== imgIdx ? 'translate-x-[200%]' : 'translate-x-0'}`}
+          className={`absolute top-0 left-0 p-0 m-0 ${index !== imgIdx ? 'translate-x-[5000%]' : 'translate-x-0'}`}
         >
           <Image
             src={image.default.src}
