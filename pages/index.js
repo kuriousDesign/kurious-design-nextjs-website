@@ -61,7 +61,7 @@ const Splash = () => {
               <div className='z-0 absolute top-[247px] left-[329px] w-[52px] h-[10px] transform rotate-[27deg] bg-redpinkAccent animate-[pulse_2.5s_ease-in-out_infinite]' />
             </>
           )}
-          <KuriousLogoAnimation displayStateReq={displayStateReq} />
+          <KuriousLogoAnimation displayStateReqInput={displayStateReq} />
         </motion.div>
       </div>
       <div className='absolute w-full h-auto bottom-24 xl:bottom-14 flex justify-center gap-10 z-50'>
@@ -71,7 +71,7 @@ const Splash = () => {
           </button>
         </Link>
         {isVisible && (
-          <button onClick={handleButtonClick} className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-red-500 hover:ring-red-500 hover:scale-105 animate-[bounce_1.5s_ease-in-out_infinite]">
+          <button onClick={handleButtonClick} className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-black text-white text-[8px] xl:text-xs font-bold font-permanentMarker hover:bg-redpinkAccent hover:ring-redpinkAccent hover:scale-105 animate-[bounce_1.5s_ease-in-out_infinite]">
             DON&apos;T TOUCH
           </button>
         )}
