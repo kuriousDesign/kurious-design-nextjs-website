@@ -28,6 +28,7 @@ const Splash = () => {
   const [displayStateReq, setDisplayStateReq] = useState(0); // Initial display state
 
   useEffect(() => {
+    setDisplayStateReq(0);
     const interval = setInterval(() => {
       setIsVisible(true);
       clearInterval(interval);
