@@ -57,8 +57,16 @@ const Splash = () => {
         >
           {displayStateReq === 0 && (
             <>
-              <div className='z-0 absolute top-[86px] left-[238px] w-[80px] h-[10px] transform -rotate-[64deg] bg-redpinkAccent animate-[pulse_4.5s_ease-in-out_infinite]' />
-              <div className='z-0 absolute top-[247px] left-[329px] w-[52px] h-[10px] transform rotate-[27deg] bg-redpinkAccent animate-[pulse_2.5s_ease-in-out_infinite]' />
+               <motion.div
+                className='z-0 absolute top-[86px] left-[238px] w-[80px] h-[10px] transform -rotate-[64deg] bg-redpinkAccent '
+                animate={{ opacity: [0, 1, 0.8, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity}}
+              />
+              <motion.div
+                className='z-0 absolute top-[247px] left-[329px] w-[52px] h-[10px] transform rotate-[27deg] bg-redpinkAccent'
+                animate={{ opacity: [0, 1, 0.8, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity}}
+              />
             </>
           )}
           <KuriousLogoAnimation displayStateReqInput={displayStateReq} />
