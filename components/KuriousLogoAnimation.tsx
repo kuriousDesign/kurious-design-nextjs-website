@@ -71,7 +71,7 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
 
     const interval = setInterval(runSlideshow, transitionTime);
     return () => clearInterval(interval);
-  }, [displayStateReqInput]);
+  }, [displayStateReqInput, dummy]);
 
   
 
