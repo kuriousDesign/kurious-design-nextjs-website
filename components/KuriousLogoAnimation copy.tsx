@@ -155,20 +155,14 @@ export default function KuriousLogoAnimation({ displayStateReq = 0 }: Props) {
   };
   // console.log('fire');
   return (
-    <>
-      {imageListUp.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute top-0 left-0 p-0 m-0 ${index !== imgIdx ? 'translate-x-[200%]' : 'translate-x-0'}`}
-        >
-          <Image
-            src={image.default.src}
-            width={443}
-            height={397}
-            alt={`img${imgIdx + 1}`}
-          />
-        </div>
-      ))}
-    </>
+
+    <Image
+      className='absolute top-0 left-0 p-0 m-0'
+      src={imgSrc.default.src}
+      width={443}
+      height={397}
+      alt={`img${imgIdx + 1}`}
+    />
+
   );
 }
