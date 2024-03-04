@@ -37,22 +37,13 @@ import Header from '../components/Header';
 import Socials from '../components/Socials';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 const Layout = ({ children }) => {
   const router = useRouter();
   // const [isSplash, setIsSplash] = useState(router.pathname === '/');
   const isSplash = router.pathname === '/';
   useEffect(() => {
-    const handleRouteChange = () => {
-      // console.log('router.pathname');
-      // console.log(router.pathname);
-      // setIsSplash(router.pathname === '/');
-    };
-    // console.log('router.pathname');
-    // console.log(router.pathname);
-
-    // handleRouteChange();
-    // router.events.on('routeChangeComplete', handleRouteChange);
 
     return () => {
       // router.events.off('routeChangeComplete', handleRouteChange);
@@ -62,6 +53,9 @@ const Layout = ({ children }) => {
     <div
       className={`page bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
+      <Head> {/* Add Head component here */}
+        <link rel="icon" href="/logo.ico" /> {/* Replace "your-favicon.ico" with your favicon file path */}
+      </Head>
       {!isSplash && (
         <>
           <Header />
