@@ -6,6 +6,8 @@ import Circles from '../../components/Circles';
 // framer motion
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import LayoutSwiper from '../../components/LayoutSwiper';
+import PortfolioSlides from './slides';
 
 
 const WorkOld = () => {
@@ -55,9 +57,7 @@ const WorkOld = () => {
 
 const Portfolio = () => {
   return (
-    <div className='h-full w-full'>
-
-    </div>
+    <LayoutSwiper slides={PortfolioSlides} />
   );
 };
 

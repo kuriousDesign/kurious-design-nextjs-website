@@ -8,7 +8,7 @@ import { fadeIn } from '../../variants';
 import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/HeadlineRevolverMobile';
 import LayoutSlide from '../../components/LayoutSlide';
 import LayoutSwiper from '../../components/LayoutSwiper';
-import HomeSlides from './HomeSlides';
+import HomeSlides from './slides';
 
 const Home = () => {
 
