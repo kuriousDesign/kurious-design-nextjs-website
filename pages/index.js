@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import KuriousLogoAnimation from '../components/KuriousLogoAnimation';
 
@@ -28,6 +28,7 @@ const Splash = () => {
   const [displayStateReq, setDisplayStateReq] = useState(0); // Initial display state
 
   useEffect(() => {
+    console.log('splash useEffect');
     setDisplayStateReq(0);
     const interval = setInterval(() => {
       setIsVisible(true);
@@ -40,9 +41,6 @@ const Splash = () => {
   const handleButtonClick = () => {
     setDisplayStateReq(prevState => (prevState + 1) % 3); // Increment and wrap around to 0 if greater than 2
   };
-
-
-
 
   return (
     <div className='w-full h-full bg-blue flex'>
@@ -75,7 +73,7 @@ const Splash = () => {
       <div className='absolute w-full h-auto bottom-24 xl:bottom-14 flex justify-center gap-10 z-50'>
         <Link href={'/home'}>
           <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-black bg-transparent text-black text-[8px] xl:text-xs font-bold font-permanentMarker hover:ring-white hover:text-white hover:scale-105 ]">
-            HOME
+            I&apos;M KURIOUS
           </button>
         </Link>
         {isVisible && (

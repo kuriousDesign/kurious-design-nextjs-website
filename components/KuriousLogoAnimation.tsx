@@ -37,8 +37,8 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
       const isReverse = displayStateReq === DisplayStates.SHOW1_REVERSE;
       if (displayState !== displayStateReq) {
         displayState = displayStateReq;
-        console.log('new display state requested');
-        console.log(displayStateReq);
+        // console.log('new display state requested');
+        // console.log(displayStateReq);
         if (displayStateReq !== 0) {
           imgIdx = 0;
         }
@@ -46,7 +46,7 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
         
         if (isReverse) {
           images = imageListUp.slice().reverse();
-          console.log('reversed');
+          // console.log('reversed');
         } else {
           if (displayStateReq !== 0) {
             images = imageListUp;
@@ -56,7 +56,8 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
       }
   
       if (displayStateReq === 0) {
-        // setImgIdx(0);
+        imgIdx = 0;
+        images = imageListUp;
       }
       else if (imgIdx < imageListUp.length - 1) {
         // setImgIdx(prevIdx => (prevIdx + 1));
@@ -64,9 +65,9 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
       } else if (displayStateReq !== 2 && !isReverse) {
         // setImgIdx(prevIdx => (prevIdx - 2));
         imgIdx -= 2;
-        console.log('isreverse');
+        // console.log('isreverse');
       } 
-      console.log(imgIdx);
+      // console.log(imgIdx);
     }
 
     const interval = setInterval(runSlideshow, transitionTime);
