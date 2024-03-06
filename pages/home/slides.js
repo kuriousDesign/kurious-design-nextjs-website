@@ -74,3 +74,9 @@ export const HomeSlides = [
     slide2,
     slide3,
 ];
+
+const Dummy = () => {
+  return null;
+}
+
+export default Dummy

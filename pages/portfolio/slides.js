@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 // variants
 import { fadeIn } from '../../variants';
-import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/HeadlineRevolverMobile';
+import { ProjectId, projectMap } from '../../copy/ProjectData';
 import LayoutSlide from '../../components/LayoutSlide';
 import ProjectSlide from './ProjectSlide';
-import { projectMap } from '../../copy/ProjectData';
+
 
 const slide1 = (
   <LayoutSlide className="bg-gray-900">Slide 1</LayoutSlide>
@@ -37,8 +37,28 @@ const slide0 = (
   </div>
 );
 
-export const PortfolioSlides = Array.from(projectMap.entries()).map(([projectId, projectData], index) => {
-  return (<ProjectSlide projectId={projectId} projectData={projectData} key={index}/>)
+export const PortfolioSlides = Array.from(projectMap.entries()).map(([projectId, projectData]) => {
+  return (<ProjectSlide projectId={projectId} projectData={projectData} key={projectId}/>)
 });
 
 PortfolioSlides.unshift(slide0);
+
+
+export const PortfolioSlidesNew = () => {
+  const slides = [];
+  slides.push(slide0);
+
+  // Iterate over the entries of projectMap and create ProjectSlide components
+  for (const [projectId, projectData] of projectMap.entries()) {
+    slides.push(<ProjectSlide key={projectId} projectId={projectId} projectData={projectData} />);
+  }
+
+  return slides;
+};
+
+
+const Dummy = () => {
+  return null;
+}
+
+export default Dummy
