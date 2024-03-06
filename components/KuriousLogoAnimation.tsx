@@ -80,7 +80,7 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 p-0 m-0 ${index !== imgIdx ? 'translate-x-[5000%]' : 'translate-x-0'}`}
+          className={`absolute top-0 left-0 p-0 m-0 ${index !== imgIdx ? 'opacity-0' : 'opacity-100'}`}
         >
           <Image
             src={image.default.src}
