@@ -6,16 +6,34 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css/effect-fade';
 import { Mousewheel, Pagination, EffectFade } from 'swiper/modules';
+import LayoutSlide from './LayoutSlide';
 
-const LayoutSwiper = () => {
+const LayoutSwiper = ({ slides }) => {
   const pagination = {
     clickable: true,
   };
+    // Ensure slides is an array before attempting to map over it
+  if (!Array.isArray(slides)) {
+    console.error('Slides must be an array.');
+    return null;
+  }
+  console.error('Slides are good.');
 
   return (
     <Swiper
       style={{
-        // Custom styles here
+        "--swiper-pagination-color": "#FFBA08",
+        "--swiper-pagination-bullet-inactive-color": "#000",
+        "--swiper-pagination-bullet-inactive-opacity": ".4",
+        "--swiper-pagination-bullet-size": "14px",
+        "--swiper-pagination-bullet-horizontal-gap": "6px",
+        "--swiper-pagination-color": "#ff0062",
+        "--swiper-pagination-left": "8px",
+        "--swiper-pagination-right": "auto",
+        "--swiper-pagination-bottom": "auto",
+        "--swiper-pagination-top": "auto",
+        "--swiper-pagination-bullet-opacity": ".3",
+        "--swiper-pagination-bullet-vertical-gap": "6px",
       }}
       direction="vertical"
       pagination={pagination}
@@ -24,22 +42,14 @@ const LayoutSwiper = () => {
       mousewheel={true}
       modules={[Mousewheel, Pagination, EffectFade]}
       effect="fade"
-      speed="600"
+      speed="1000"
     >
-      {/* Swiper slides here */}
-      <SwiperSlide>
-        <div className="w-full h-full text-white text-xl bg-[#181717] flex text-center items-center justify-center">Slide 1</div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="w-full h-full text-white text-xl bg-green-500 flex text-center items-center justify-center">Slide 2</div>
-      </SwiperSlide>
-      <SwiperSlide className="text-white text-xl">Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {/* Use map function to render each LayoutSlide component */}
+      {slides.map((slide, index) => (
+        <SwiperSlide key={index}>
+          {slide} {/* Render the LayoutSlide component */}
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

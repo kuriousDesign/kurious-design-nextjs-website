@@ -11,7 +11,7 @@ const Header = () => {
   const designText = 'D E S I G N';
   const router = useRouter();
   const pathname = router.pathname;
-  const isWork = pathname === '/work';
+  const isPortfolioPage = pathname === '/portfolio';
   const [isOpen, setOpen] = useState(false);
 
   // Close the nav whenever the route changes
@@ -87,14 +87,14 @@ const Header = () => {
           </Link>
         </div>
         {/* portfolio btn*/}
-        {!isWork && (
+        {!isPortfolioPage && (
           <>
-            <Link className='hidden xl:block' href={'/work'}>
+            <Link className='hidden xl:block' href={'/portfolio'}>
               <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 xl:w-[130px] xl:h-[45px] rounded-full ring-2 ring-white bg-transparent text-white xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
                 PORTFOLIO
               </button>
             </Link>
-            <Link className='xl:hidden' href={'/work'}>
+            <Link className='xl:hidden' href={'/portfolio'}>
               <button className="absolute right-5 xl:right-10 top-1/2 -translate-y-1/2 w-[70px] h-[30px] rounded-full ring-2 ring-white bg-transparent text-white text-[6px] xl:text-xs font-bold font-permanentMarker hover:ring-blue-300 hover:text-blue-300 hover:scale-105">
                 PORTFOLIO
               </button>

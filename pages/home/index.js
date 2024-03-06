@@ -6,12 +6,14 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../../variants';
 import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/HeadlineRevolverMobile';
+import LayoutSlide from '../../components/LayoutSlide';
+import LayoutSwiper from '../../components/LayoutSwiper';
+import HomeSlides from './HomeSlides';
 
 const Home = () => {
-  return (
-    <div className='h-full w-full'>
 
-    </div>
+  return (
+    <LayoutSwiper slides={HomeSlides} />
   );
 };
 
