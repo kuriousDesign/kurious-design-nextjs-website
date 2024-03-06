@@ -1,3 +1,16 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import 'swiper/css/bundle';
+import 'swiper/css/mousewheel';
+import 'swiper/css/effect-fade';
+import { Mousewheel, Pagination, EffectFade } from 'swiper/modules';
+// icons
+import { FaQuoteLeft } from 'react-icons/fa';
+// next image
+import Image from 'next/image';
+
 // testimonial slider data
 export const testimonialSlider = [
   {
@@ -21,22 +34,6 @@ export const testimonialSlider = [
     'was not clear at any time this guy had a clue what he was doing, he just kept saying "its a metaphore" and kept yelling "SCOPE CREEP" ...frustrated to say the least '
   },
 ];
-
-// import swiper react components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-// import required modules
-import { Navigation, Pagination } from 'swiper';
-
-// icons
-import { FaQuoteLeft } from 'react-icons/fa';
-// next image
-import Image from 'next/image';
 
 const TestimonialSlider = () => {
   return (

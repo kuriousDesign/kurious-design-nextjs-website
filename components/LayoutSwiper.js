@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 import 'swiper/css/effect-fade';
 import { Mousewheel, Pagination, EffectFade } from 'swiper/modules';
-import LayoutSlide from './LayoutSlide';
+
 
 const LayoutSwiper = ({ slides }) => {
   const pagination = {
