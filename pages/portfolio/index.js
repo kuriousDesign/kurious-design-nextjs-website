@@ -1,5 +1,5 @@
 import LayoutSwiper from '../../components/LayoutSwiper';
-import PortfolioSlides from './slides';
+import { PortfolioSlides } from './slides';
 
 
 const Portfolio = () => {
@@ -9,5 +9,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-

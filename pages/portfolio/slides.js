@@ -37,10 +37,8 @@ const slide0 = (
   </div>
 );
 
-const PortfolioSlides = Array.from(projectMap.entries()).map(([projectId, projectData], index) => {
+export const PortfolioSlides = Array.from(projectMap.entries()).map(([projectId, projectData], index) => {
   return (<ProjectSlide projectId={projectId} projectData={projectData} key={index}/>)
 });
 
 PortfolioSlides.unshift(slide0);
-
-export default PortfolioSlides;

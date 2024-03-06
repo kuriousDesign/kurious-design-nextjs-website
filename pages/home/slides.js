@@ -8,15 +8,15 @@ import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/Headl
 import LayoutSlide from '../../components/LayoutSlide';
 
 const slide1 = (
-  <LayoutSlide key="1" className="bg-gray-900">Slide 1</LayoutSlide>
+  <LayoutSlide className="bg-gray-900">More to come...</LayoutSlide>
 );
 
 const slide2 = (
-  <LayoutSlide key="2" className="bg-purple-800">Slide 2</LayoutSlide>
+  <LayoutSlide className="bg-purple-800">On these other slides</LayoutSlide>
 );
 
 const slide3 = (
-  <LayoutSlide key="3" className="bg-green-800">Slide 3</LayoutSlide>
+  <LayoutSlide className="bg-green-800">I bet you are kurious! </LayoutSlide>
 );
 const slide0 = (
   <div className='h-full w-full'>
@@ -68,11 +68,9 @@ const slide0 = (
   </div>
 );
 
-const HomeSlides = [
+export const HomeSlides = [
    slide0,
     slide1,
     slide2,
     slide3,
 ];
-
-export default HomeSlides;
