@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import KuriousLogoAnimation from '../components/KuriousLogoAnimation';
+import OversizedRing, { ColoredRing, LargeCircleSVG } from '../components/OversizedRing';
 
 // variants
 const imageVariants = {
@@ -44,6 +45,7 @@ const Splash = () => {
 
   return (
     <div className='w-full h-full bg-blue flex'>
+      <OversizedRing />
       <div className='absolute top-1/2 transform -translate-y-1/2 left-0 w-full h-[500px]'>
         <motion.div
           variants={imageVariants}
