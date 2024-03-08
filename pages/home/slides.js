@@ -5,20 +5,79 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../../variants';
 import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/HeadlineRevolverMobile';
-import LayoutSlide from '../../components/LayoutSlide';
+import LayoutSlide, { SlideHeading } from '../../components/LayoutSlide';
+import OctopusStickFigure from './OctopusStickFigure';
+import ActiveProjectsList from './ActiveProjectsList';
 
-const slide1 = (
-  <LayoutSlide className="bg-gray-900">More to come...</LayoutSlide>
+const slideFirst = (
+  <LayoutSlide className="bg-indigo-600">
+    <div className='max-w-[800px] flex flex-col justify-start items-start h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+      <SlideHeading text="Art meets Robotics" />
+      {/* subtitle */}
+      <motion.p
+        variants={fadeIn('down', 0.3)}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+        className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 font-gothamBook text-blue-400 text-lg xl:text-xl font-semibold'
+      >
+        Let me help design your next interactive creation and inject some robotic horsepower.
+        Who said engineers can&apos;t be artists?
+      </motion.p>
+    </div>  
+  </LayoutSlide>
 );
 
-const slide2 = (
-  <LayoutSlide className="bg-purple-800">On these other slides</LayoutSlide>
+const slideItsAlive = (
+  <LayoutSlide className="bg-red-900">
+    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+      <SlideHeading text={"It's Alive"} punctuation="!" />
+      <p className='text-left'>
+        Bring some life to your bar, restaurant, music venue, hotel or home using existing equipment.
+        Let me connect lights, sounds and whatever to your space to make it interactive.
+      </p>
+    </div>  
+  </LayoutSlide>
 );
 
-const slide3 = (
-  <LayoutSlide className="bg-green-800">I bet you are kurious! </LayoutSlide>
+
+const slideGamify = (
+  <LayoutSlide className="bg-purple-800">
+    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+      <SlideHeading text={"Gamify your Space"} punctuation="!" />
+      <p className='text-left'>
+        With a little bit of code and some hardware, I can turn your space into a game.
+        The budget is friendlier than you think.
+      </p>
+    </div>  
+  </LayoutSlide>
 );
-const slide0 = (
+
+const slideJakeOfAllTrades = (
+  <LayoutSlide className="bg-green-800">
+    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+      <SlideHeading text="Jake-of-all-trades" />
+      <p className='text-left'>
+        I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake.
+        I hate puns but this was too easy.
+      </p>
+    </div>
+  </LayoutSlide>
+);
+
+const slideActiveProjects = (
+  <LayoutSlide className="bg-gray-800">
+    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+      <SlideHeading text="Active Projects" />
+      <p className='text-left self-start'>
+        Here is a list of what I&apos;m currently working on.
+      </p>
+      <ActiveProjectsList />
+
+    </div>  
+  </LayoutSlide>
+);
+const slideFirstOld = (
   <div className='h-full w-full'>
   {/* left chunk */}
   <div className='overflow-hidden w-full xl:w-2/3 h-2/3 xl:h-full absolute left-0 top-0 '>
@@ -69,10 +128,11 @@ const slide0 = (
 );
 
 export const HomeSlides = [
-   slide0,
-    slide1,
-    slide2,
-    slide3,
+  slideFirst,
+  slideItsAlive,
+  slideGamify,
+  slideJakeOfAllTrades,
+  slideActiveProjects,
 ];
 
 const Dummy = () => {

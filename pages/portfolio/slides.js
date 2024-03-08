@@ -1,10 +1,8 @@
-import ParticlesContainer from '../../components/ParticlesContainer';
-// framer motion
 import { motion } from 'framer-motion';
 
 // variants
 import { fadeIn } from '../../variants';
-import { ProjectId, projectMap } from '../../copy/ProjectData';
+import { projectMap } from '../../copy/ProjectData';
 import LayoutSlide from '../../components/LayoutSlide';
 import ProjectSlide from './ProjectSlide';
 
@@ -20,7 +18,7 @@ const slide2 = (
 const slide3 = (
   <LayoutSlide className="bg-green-800">Slide 3</LayoutSlide>
 );
-const slide0 = (
+const slideFirst = (
   <div className='h-full bg-gray-800 py-32 text-center'>
     <div className='container mx-auto h-full flex flex-col justify-center'>
       {/* title */}

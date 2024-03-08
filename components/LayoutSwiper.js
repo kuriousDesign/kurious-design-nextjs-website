@@ -14,10 +14,8 @@ const LayoutSwiper = ({ slides }) => {
   };
     // Ensure slides is an array before attempting to map over it
   if (!Array.isArray(slides)) {
-    console.error('Slides must be an array.');
     return null;
   }
-  console.error('Slides are good.');
 
   return (
     <Swiper
@@ -32,7 +30,7 @@ const LayoutSwiper = ({ slides }) => {
         "--swiper-pagination-right": "auto",
         "--swiper-pagination-bottom": "auto",
         "--swiper-pagination-top": "auto",
-        "--swiper-pagination-bullet-opacity": ".3",
+        "--swiper-pagination-bullet-opacity": ".9",
         "--swiper-pagination-bullet-vertical-gap": "6px",
       }}
       direction="vertical"
@@ -42,7 +40,7 @@ const LayoutSwiper = ({ slides }) => {
       mousewheel={true}
       modules={[Mousewheel, Pagination, EffectFade]}
       effect="fade"
-      speed="1000"
+      speed="500"
     >
       {/* Use map function to render each LayoutSlide component */}
       {slides.map((slide, index) => (
