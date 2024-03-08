@@ -1,23 +1,8 @@
 import { motion } from 'framer-motion';
-
-// variants
 import { fadeIn } from '../../variants';
 import { projectMap } from '../../copy/ProjectData';
-import LayoutSlide from '../../components/LayoutSlide';
 import ProjectSlide from './ProjectSlide';
 
-
-const slide1 = (
-  <LayoutSlide className="bg-gray-900">Slide 1</LayoutSlide>
-);
-
-const slide2 = (
-  <LayoutSlide className="bg-purple-800">Slide 2</LayoutSlide>
-);
-
-const slide3 = (
-  <LayoutSlide className="bg-green-800">Slide 3</LayoutSlide>
-);
 const slideFirst = (
   <div className='h-full bg-gray-800 py-32 text-center'>
     <div className='container mx-auto h-full flex flex-col justify-center'>
@@ -39,20 +24,7 @@ export const PortfolioSlides = Array.from(projectMap.entries()).map(([projectId,
   return (<ProjectSlide projectId={projectId} projectData={projectData} key={projectId}/>)
 });
 
-PortfolioSlides.unshift(slide0);
-
-
-export const PortfolioSlidesNew = () => {
-  const slides = [];
-  slides.push(slide0);
-
-  // Iterate over the entries of projectMap and create ProjectSlide components
-  for (const [projectId, projectData] of projectMap.entries()) {
-    slides.push(<ProjectSlide key={projectId} projectId={projectId} projectData={projectData} />);
-  }
-
-  return slides;
-};
+PortfolioSlides.unshift(slideFirst);
 
 
 const Dummy = () => {
