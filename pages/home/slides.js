@@ -8,6 +8,7 @@ import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/Headl
 import LayoutSlide, { SlideHeading } from '../../components/LayoutSlide';
 import OctopusStickFigure from './OctopusStickFigure';
 import ActiveProjectsList from './ActiveProjectsList';
+import ServicesList from './ServicesList';
 
 const slideFirst = (
   <LayoutSlide className="bg-indigo-600">
@@ -53,14 +54,17 @@ const slideGamify = (
   </LayoutSlide>
 );
 
-const slideJakeOfAllTrades = (
+
+
+const slideServices = (
   <LayoutSlide className="bg-green-800">
     <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
       <SlideHeading text="Jake-of-all-trades" />
-      <p className='text-left'>
+      <p className='text-left mb-4'>
         I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake.
-        I hate puns but this was too easy.
+        Here is a list of the services I offer.
       </p>
+      <ServicesList />
     </div>
   </LayoutSlide>
 );
@@ -131,7 +135,7 @@ export const HomeSlides = [
   slideFirst,
   slideItsAlive,
   slideGamify,
-  slideJakeOfAllTrades,
+  slideServices,
   slideActiveProjects,
 ];
 
