@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const imgContextsUp = require.context(`../public/kurious/up`, true);
 const imageListUp = imgContextsUp.keys().map(image => imgContextsUp(image));
@@ -78,6 +79,20 @@ export default function KuriousLogoAnimation({ displayStateReqInput = 0 }: Props
 
   return (
     <>
+      {displayStateReqInput === 0 && (
+        <>
+          <motion.div
+            className='z-0 absolute top-[86px] left-[238px] w-[80px] h-[10px] transform -rotate-[64deg] bg-redpinkAccent '
+            animate={{ opacity: [0, 1, 0.8, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity}}
+          />
+          <motion.div
+            className='z-0 absolute top-[247px] left-[329px] w-[52px] h-[10px] transform rotate-[27deg] bg-redpinkAccent'
+            animate={{ opacity: [0, 1, 0.8, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity}}
+          />
+        </>
+      )}
       {images.map((image, index) => (
         <div
           key={index}
