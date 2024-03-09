@@ -9,6 +9,7 @@ import LayoutSlide, { SlideHeading } from '../../components/LayoutSlide';
 import OctopusStickFigure from './OctopusStickFigure';
 import ActiveProjectsList from './ActiveProjectsList';
 import ServicesList from './ServicesList';
+import { Spotlight } from '../../components/Spotlight';
 
 const slideFirst = (
   <LayoutSlide className="bg-indigo-600">
@@ -131,12 +132,26 @@ const slideFirstOld = (
   </div>
 );
 
+const slideSpotlight = (
+  <LayoutSlide className=" bg-darkblue">
+  <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+    <SlideHeading text="Reactive Lighting" />
+    <p className='text-left mb-4'>
+      I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake.
+      Here is a list of the services I offer.
+    </p>
+    <Spotlight />
+  </div>
+</LayoutSlide>
+);
+
 export const HomeSlides = [
   slideFirst,
   slideItsAlive,
   slideGamify,
   slideServices,
   slideActiveProjects,
+  slideSpotlight,
 ];
 
 const Dummy = () => {
