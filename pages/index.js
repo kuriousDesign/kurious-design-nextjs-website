@@ -42,15 +42,58 @@ const Splash = () => {
   const handleButtonClick = () => {
     setDisplayStateReq(prevState => (prevState + 1) % 3); // Increment and wrap around to 0 if greater than 2
   };
-  
+
+  const variantRing = {
+    initial: {
+      x: 0,
+    },
+    animate: {
+      x: [0,17], // Oscillating x value between 0 and 20px
+
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const variantRotate = {
+    initial: {
+      rotate: 0,
+    },
+    animate: {
+      rotate: [0, -360], // Oscillating x value between 0 and 20px
+      transition: {
+        duration: 4,
+        repeat: Infinity, // Repeat animation indefinitely
+        ease: "linear",
+      },
+    },
+  };
+
+
   return (
     <div className='w-full h-full bg-blue flex overflow-hidden'>
-      <div className={`absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-black bg-opacity-10`} />
-      <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-auto h-auto'>
-        <SvgRing outerDiameterPx={1000} thicknessPx={200} color={'#c447f5'} opacity={0.75}/>
+      <div className={`absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-black bg-opacity-0`} />
+      <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-full h-auto '>
+        <motion.div 
+          className='w-auto h-auto flex justify-center items-center'
+          variants={variantRotate}
+          initial="initial" 
+          animate="animate"
+        >
+          <motion.div 
+            className='w-auto h-auto'
+            variants={variantRing}
+            initial="initial" 
+            animate="animate" 
+          >
+            <SvgRing outerDiameterPx={1000} thicknessPx={180} color={'#6B2795'} opacity={0.99}/>
+          </motion.div>
+        </motion.div>
       </div>
       <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-auto h-auto'>
-        <SvgRing outerDiameterPx={700} thicknessPx={100} color='#ff0000' opacity={0.70}/>
+        <SvgRing outerDiameterPx={750} thicknessPx={100} color='#ff0000' opacity={0.70}/>
       </div>
       
       <div className='absolute top-1/2 transform -translate-y-1/2 left-0 w-full h-[397px]'>
