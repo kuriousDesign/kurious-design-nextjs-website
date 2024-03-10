@@ -9,8 +9,37 @@ import { motion } from 'framer-motion';
 
 // variants
 import { fadeIn } from '../../variants';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Send email using the form data
+    const { name, email, subject, message } = formData;
+    const emailContent = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+
+    // You can use a library or an API to send the email
+    // For example, you can use the 'nodemailer' library in Node.js
+    // Here's a simplified example using the 'console.log' function instead
+    console.log('Sending email:', emailContent);
+
+  };
+
   return (
     <div className='h-full bg-primary/30'>
       <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'>
@@ -33,15 +62,47 @@ const Contact = () => {
             animate='show'
             exit='hidden'
             className='flex-1 flex flex-col gap-6 w-full mx-auto font-gothamBook'
+            onSubmit={handleFormSubmit}
           >
             {/* input group */}
             <div className='flex gap-x-6 w-full'>
-              <input type='text' placeholder='name' className='input' />
-              <input type='text' placeholder='email' className='input' />
+              <input
+                type='text'
+                placeholder='name'
+                className='input'
+                name='name'
+                value={formData.name}
+                onChange={handleInputChange}
+              />
+              <input
+                type='text'
+                placeholder='email'
+                className='input'
+                name='email'
+                value={formData.email}
+                onChange={handleInputChange}
+              />
             </div>
-            <input type='text' placeholder='subject' className='input' />
-            <textarea placeholder='message' className='textarea'></textarea>
-            <button className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
+            <input
+              type='text'
+              placeholder='subject'
+              className='input'
+              name='subject'
+              value={formData.subject}
+              onChange={handleInputChange}
+            />
+            <textarea
+              placeholder='message'
+              className='textarea'
+              name='message'
+              value={formData.message}
+              onChange={handleInputChange}
+            ></textarea>
+            <button
+              className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'
+              type='submit'
+              onClick={handleFormSubmit}
+            >
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 font-permanentMarker'>
                 We can talk
               </span>

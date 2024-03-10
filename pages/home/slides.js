@@ -9,8 +9,28 @@ import LayoutSlide, { SlideHeading } from '../../components/LayoutSlide';
 import ActiveProjectsList from './ActiveProjectsList';
 import ServicesList from './ServicesList';
 import SpotlightAnimation from '../../components/Spotlight';
+import Link from 'next/link';
+
 
 const slideFirst = (
+  <div className='h-full bg-gray-800 py-32 text-center'>
+    <div className='container mx-auto h-full flex flex-col justify-center'>
+      {/* title */}
+      <motion.h2
+        variants={fadeIn('up', 0.2)}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+        className='h2 mb-8 xl:mb-0 font-permanentMarker'
+      >
+        VIDEO <span className='text-redpinkAccent'>.</span>
+        <p>coming soon</p>
+      </motion.h2>
+    </div>
+  </div>
+);
+
+const slideArtMeetsRobotics = (
   <LayoutSlide className="bg-indigo-600">
     <div className='max-w-[800px] flex flex-col justify-start items-start h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
       <SlideHeading text="Art meets Robotics" />
@@ -46,7 +66,7 @@ const slideGamify = (
   <LayoutSlide className="bg-purple-800">
     <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
       <SlideHeading text={"Gamify your Space"} punctuation="!" />
-      <p className='text-left'>
+      <p className='text-center xl:text-left'>
         With a little bit of code and some hardware, I can turn your space into a game.
         The budget is friendlier than you think.
       </p>
@@ -60,10 +80,17 @@ const slideServices = (
   <LayoutSlide className="bg-green-800">
     <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[20vw]'>
       <SlideHeading text="Jake-of-all-trades" />
-      <p className='text-left self-start mb-4'>
+      <p className='text-center xl:text-left self-start mb-4'>
         I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake. Here is a list of the services I offer.
       </p>
       <ServicesList />
+      <div className='mt-10 flex justify-center z-50'>
+        <Link href={'/services'}>
+          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:scale-105 ]">
+            MORE
+          </button>
+        </Link>
+      </div>
     </div>
   </LayoutSlide>
 );
@@ -129,27 +156,28 @@ const slideFirstOld = (
   </div>
   </div>
 );
-const beamD = 300;
-const beamL = 500;
+
 const slideSpotlight = (
   <LayoutSlide className=" bg-gray-800">
-  <div className='max-w-[800px] flex flex-col justify-center xl:justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+  <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
     <SlideHeading text="Reactive Lighting" />
-    <p className='text-left mb-4'>
+    <p className='text-center xl:text-left mb-10'>
       Can&apos;t afford a lighting tech at your venue, but want an interesting light show anyways? Try out my reactive lighting controls with multiple modes to suite your genre.
     </p>
-    <SpotlightAnimation beamDiameter = {beamD} beamLength = {beamL}/>
+    <SpotlightAnimation />
   </div>
 </LayoutSlide>
 );
 
 export const HomeSlides = [
   slideFirst,
+  slideSpotlight,
+  slideArtMeetsRobotics,
   slideItsAlive,
   slideGamify,
   slideServices,
   slideActiveProjects,
-  slideSpotlight,
+
 ];
 
 const Dummy = () => {

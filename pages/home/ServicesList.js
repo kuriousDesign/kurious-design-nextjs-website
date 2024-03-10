@@ -6,7 +6,7 @@ import { TbFountainFilled } from "react-icons/tb";
 const ServicesList = () => {
   const iconColor = "text-blue";
   return (
-    <ul className="list-none text-sm xl:text-xl">
+    <ul className="list-none text-sm xl:text-xl hidden xl:block">
       <li className="flex items-center">
         <GiGears className={`h-5 w-5 mr-2 ${iconColor}`} />
         interactive design/immersive art/creative technology
