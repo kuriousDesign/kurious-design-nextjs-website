@@ -163,7 +163,7 @@ const beamAnglePositiveMobile = 40;
   
   export const SpotlightAnimation = () => {
     return (
-      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px]`}>
+      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px] transform scale-[80%] xl:scale-90`}>
         <StaticComponents />
         <motion.div
           className={`hidden xl:block absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
