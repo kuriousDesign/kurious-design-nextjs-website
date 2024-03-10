@@ -9,8 +9,7 @@ const lightOffset = 30;
 const lightHeight = 60;
 const pivotX = svgWidth / 2;
 const pivotY = 33;
-const triangleWidth = 300;
-const triangleHeight = 500;
+
 
 
   const StaticComponents = () => {
@@ -87,8 +86,10 @@ const triangleHeight = 500;
     const baseX1 = xOffset;
     const baseX2 = xOffset + width;
     const baseY = yOffset + height;
-    const rx = width/2;
-    const ry = Math.round(width*1.0/2);
+    // const rx = width/2;
+    // const ry = Math.round(width*1.0/2);
+    const rx = width !== 0 ? Math.round(width / 2) : 0;
+    const ry = rx;
 
 
   
@@ -104,13 +105,22 @@ const triangleHeight = 500;
             cx={Math.round(baseX2-baseX1)/2 + baseX1}
             cy={baseY}
             rx={rx}
-            ry={ry}
+            ry={ry.toString()}
         />
       </svg>
     );
   };
 
 
+const beamDiameterDesktop = 300;
+const beamLengthDesktop = 500;
+const beamAngleNegativeDesktop = -50;
+const beamAnglePositiveDesktop = 50;
+
+const beamDiameterMobile = 150;
+const beamLengthMobile = 200;
+const beamAngleNegativeMobile = -40;
+const beamAnglePositiveMobile = 40;
   const AssemblyComponents = () => {
     return (
         <>
@@ -143,8 +153,10 @@ const triangleHeight = 500;
                 />
                 
             </svg>
-            {/* Spotlight beam - assembly */}
-            <LightBeam className="absolute top-0 left-0 transform -translate-x-1/2" width={triangleWidth} height={triangleHeight} fill='red' xOffset={2*pivotX} yOffset = {lightOffset + lightHeight - 15} opacity="0.2"/>
+            {/* Spotlight beam for mobile - assembly */}
+            <LightBeam className="xl:hidden absolute top-0 left-0 transform -translate-x-1/2" width={beamDiameterMobile} height={beamLengthMobile} angleNeg={beamAngleNegativeMobile} anglePos={beamAnglePositiveMobile} fill='red' xOffset={2*pivotX} yOffset = {lightOffset + lightHeight - 15} opacity="0.2"/>
+            {/* Spotlight beam for Desktop - assembly */}
+            <LightBeam className="hidden xl:block absolute top-0 left-0 transform -translate-x-1/2" width={beamDiameterDesktop} height={beamLengthDesktop} angleNeg={beamAngleNegativeDesktop} anglePos={beamAnglePositiveDesktop} fill='red' xOffset={2*pivotX} yOffset = {lightOffset + lightHeight - 15} opacity="0.2"/>
       </>
     );
   };
@@ -154,18 +166,27 @@ const triangleHeight = 500;
       <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px]`}>
         <StaticComponents />
         <motion.div
-          className={`absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
+          className={`hidden xl:block absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
           style={{ originX: `${pivotX}px`, originY: `${pivotY}px` }}
           initial={{ rotate: 0 }}
           animate={{ rotate: [0, 50, 62, 60, 61, -60, -35, -33, -34,0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut"}}
         >
-          <AssemblyComponents />
+            <AssemblyComponents />
         </motion.div>
-        <div className="absolute top-[290px] -left-[480px] text-darkblue w-36 h-auto ">
+        <motion.div
+          className={`xl:hidden absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
+          style={{ originX: `${pivotX}px`, originY: `${pivotY}px` }}
+          initial={{ rotate: 0 }}
+          animate={{ rotate: [0, 35, 44, 43, 43, -45, -35, -33, -34,0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut"}}
+        >
+            <AssemblyComponents />
+        </motion.div>
+        <div className="absolute top-[200px] -left-[190px] xl:top-[290px] xl:-left-[480px] text-gray-800 w-36 h-auto font-extrabold ">
             COOL SHIT!
         </div>
-        <div className="absolute top-[470px] left-[270px] text-darkblue w-36 h-auto ">
+        <div className="absolute top-[210px] left-[110px] xl:top-[470px] xl:left-[270px] text-gray-800 w-36 h-auto font-extrabold ">
             BEAT/TONE REACTIVE
         </div>
       </div>
