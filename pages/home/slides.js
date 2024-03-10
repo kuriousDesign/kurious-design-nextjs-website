@@ -6,10 +6,9 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import { HeadlineRevolverMobile, HeadlineRevolver } from '../../components/HeadlineRevolverMobile';
 import LayoutSlide, { SlideHeading } from '../../components/LayoutSlide';
-import OctopusStickFigure from './OctopusStickFigure';
 import ActiveProjectsList from './ActiveProjectsList';
 import ServicesList from './ServicesList';
-import { MovingSpotlight } from '../../components/Spotlight';
+import SpotlightAnimation from '../../components/Spotlight';
 
 const slideFirst = (
   <LayoutSlide className="bg-indigo-600">
@@ -140,7 +139,7 @@ const slideSpotlight = (
       I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake.
       Here is a list of the services I offer.
     </p>
-    <MovingSpotlight />
+    <SpotlightAnimation />
   </div>
 </LayoutSlide>
 );

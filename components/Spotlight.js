@@ -9,6 +9,8 @@ const lightOffset = 30;
 const lightHeight = 60;
 const pivotX = svgWidth / 2;
 const pivotY = 33;
+const triangleWidth = 300;
+const triangleHeight = 500;
 
 
   const StaticComponents = () => {
@@ -26,62 +28,148 @@ const pivotY = 33;
     );
   };
   
-  const AssemblyComponents = () => {
+  const Triangle = ({ width = 0, height = 0, fill = "green" } = {}) => {
     return (
-      <svg className={`absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`} viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
-        {/* Outer frame - assembly */}
-        <rect
-          className="fill-current text-gray-700"
-          x={(svgWidth - plateWidth) / 2 + Math.round((plateWidth - frameWidth) / 2)}
-          y={lightOffset}
-          width={frameWidth}
-          height={lightHeight}
-          rx="18"
-        />
-  
-        {/* Inner light - assembly */}
-        <ellipse
-          className="fill-current text-redpinkAccent"
-          cx={(svgWidth - plateWidth) / 2 + Math.round(plateWidth / 2)}
-          cy={lightOffset + lightHeight - 15}
-          rx="20"
-          ry="10"
-        />
-  
-        {/* Outer light - assembly */}
-        <circle
-          className="fill-current text-white"
-          cx={(svgWidth - plateWidth) / 2 + Math.round(plateWidth / 2)}
-          cy={lightOffset + lightHeight - 15}
-          r="5"
-        />
-        {/* Spotlight beam - assembly */}
+      <svg width={width} height={height} >
         <path
-            className="fill-current text-yellow-300"
-            d={`M ${pivotX} ${pivotY + 7} Q ${pivotX} ${lightOffset + lightHeight + 10}, ${(svgHeight - plateWidth) / 2 + Math.round(plateWidth / 2)} ${lightOffset + lightHeight - 15}`}
+          fill={fill}
+          fillOpacity={0.5}
+          d={`M ${Math.round(width / 2)} 0 L ${width} ${height} L 0 ${height} Z`}
+        />
+      </svg>
+    );
+  };
+  const Trapezoid = ({ width, height, topWidth, fill = "green", xOffset = 0, yOffset = 0 } = {}) => {
+    // Calculate points for the trapezoid path
+    const bottomWidth = topWidth * 1.0; // Width of the bottom side of the trapezoid
+    const halfHeight = height * 0.5; // Half the height of the trapezoid
+    const topX1 = xOffset - topWidth / 2;
+    const topX2 = xOffset + topWidth / 2;
+    const bottomX1 = xOffset - bottomWidth / 2;
+    const bottomX2 = xOffset + bottomWidth / 2;
+    const topY = yOffset - halfHeight;
+    const bottomY = yOffset + halfHeight;
+    return (
+      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+        <path
+          fill={fill}
+          fillOpacity={0.5}
+          d={`M ${topX1} ${topY} L ${topX2} ${topY} L ${bottomX2} ${bottomY} L ${bottomX1} ${bottomY} Z`}
         />
       </svg>
     );
   };
   
-  export const MovingSpotlight = () => {
+
+  const TriangleIso = ({ className = '', width = 0, height = 0, fill = "green", xOffset = 0, yOffset = 0, opacity = 1.0 } = {}) => {
+    // Calculate points for the triangle path
+    const peakX = xOffset + width/2; // Peak of the triangle coincides with the center of the inner light
+    const peakY = yOffset; // Adjust for triangle height
+    const baseX1 = xOffset;
+    const baseX2 = xOffset + width;
+    const baseY = yOffset + height;
+  
     return (
-      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px]`}>
-        <StaticComponents />
-        <motion.svg
-          className={`absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
-          viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-          style={{ transformOrigin: `${pivotX}px ${pivotY}px` }}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 4, repeat: Infinity }}
-        >
-          <AssemblyComponents />
-        </motion.svg>
-      </div>
+      <svg className={className} width={width+xOffset} height={height+yOffset} viewBox={`0 0 ${width+xOffset} ${height+yOffset}`}>
+        <path
+          fill={fill}
+          fillOpacity={opacity}
+          d={`M ${peakX} ${peakY} L ${baseX2} ${baseY} L ${baseX1} ${baseY} Z`}
+        />
+      </svg>
+    );
+  };
+
+  const LightBeam = ({ className = '', width = 0, height = 0, fill = "green", xOffset = 0, yOffset = 0, opacity = 1.0 } = {}) => {
+    // Calculate points for the triangle path
+    const peakX = xOffset + width/2; // Peak of the triangle coincides with the center of the inner light
+    const peakY = yOffset; // Adjust for triangle height
+    const baseX1 = xOffset;
+    const baseX2 = xOffset + width;
+    const baseY = yOffset + height;
+    const rx = width/2;
+    const ry = Math.round(width*1.0/2);
+
+
+  
+    return (
+      <svg className={className} width={width+xOffset} height={height+yOffset+ry} viewBox={`0 0 ${width+xOffset} ${height+yOffset+ry}`}>
+        <path
+          fill={fill}
+          fillOpacity={opacity}
+          d={`M ${peakX} ${peakY} L ${baseX2} ${baseY} L ${baseX1} ${baseY} Z`}
+        />
+        <ellipse
+            className="fill-current text-redpinkAccent"
+            cx={Math.round(baseX2-baseX1)/2 + baseX1}
+            cy={baseY}
+            rx={rx}
+            ry={ry}
+        />
+      </svg>
+    );
+  };
+
+
+  const AssemblyComponents = () => {
+    return (
+        <>
+            <svg className={`absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`} viewBox={`0 0 ${svgWidth} ${svgHeight}`}>
+                {/* Outer frame - assembly */}
+                <rect
+                className="fill-current text-gray-700"
+                x={(svgWidth - plateWidth) / 2 + Math.round((plateWidth - frameWidth) / 2)}
+                y={lightOffset}
+                width={frameWidth}
+                height={lightHeight}
+                rx="18"
+                />
+        
+                {/* Inner light - assembly */}
+                <ellipse
+                className="fill-current text-redpinkAccent"
+                cx={(svgWidth - plateWidth) / 2 + Math.round(plateWidth / 2)}
+                cy={lightOffset + lightHeight - 15}
+                rx="20"
+                ry="10"
+                />
+        
+                {/* Outer light - assembly */}
+                <circle
+                className="fill-current text-white"
+                cx={(svgWidth - plateWidth) / 2 + Math.round(plateWidth / 2)}
+                cy={lightOffset + lightHeight - 15}
+                r="5"
+                />
+                
+            </svg>
+            {/* Spotlight beam - assembly */}
+            <LightBeam className="absolute top-0 left-0 transform -translate-x-1/2" width={triangleWidth} height={triangleHeight} fill='red' xOffset={2*pivotX} yOffset = {lightOffset + lightHeight - 15} opacity="0.2"/>
+      </>
     );
   };
   
-const SpotlightAnimation = () => {}
+  export const SpotlightAnimation = () => {
+    return (
+      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px]`}>
+        <StaticComponents />
+        <motion.div
+          className={`absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
+          style={{ originX: `${pivotX}px`, originY: `${pivotY}px` }}
+          initial={{ rotate: 0 }}
+          animate={{ rotate: [0, 50, 62, 60, 61, -60, -35, -33, -34,0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut"}}
+        >
+          <AssemblyComponents />
+        </motion.div>
+        <div className="absolute top-[290px] -left-[480px] text-darkblue w-36 h-auto ">
+            COOL SHIT!
+        </div>
+        <div className="absolute top-[470px] left-[270px] text-darkblue w-36 h-auto ">
+            BEAT/TONE REACTIVE
+        </div>
+      </div>
+    );
+  };
 
 export default SpotlightAnimation;
