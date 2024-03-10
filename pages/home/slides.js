@@ -58,11 +58,10 @@ const slideGamify = (
 
 const slideServices = (
   <LayoutSlide className="bg-green-800">
-    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+    <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[20vw]'>
       <SlideHeading text="Jake-of-all-trades" />
-      <p className='text-left mb-4'>
-        I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake.
-        Here is a list of the services I offer.
+      <p className='text-left self-start mb-4'>
+        I&apos;m a mechatronics engineer, designer, full-stack developer, and a Jake. Here is a list of the services I offer.
       </p>
       <ServicesList />
     </div>
@@ -73,7 +72,7 @@ const slideActiveProjects = (
   <LayoutSlide className="bg-gray-800">
     <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
       <SlideHeading text="Active Projects" />
-      <p className='text-left self-start'>
+      <p className='text-left self-start mb-4'>
         Here is a list of what I&apos;m currently working on.
       </p>
       <ActiveProjectsList />
@@ -134,7 +133,7 @@ const beamD = 300;
 const beamL = 500;
 const slideSpotlight = (
   <LayoutSlide className=" bg-gray-800">
-  <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+  <div className='max-w-[800px] flex flex-col justify-center xl:justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
     <SlideHeading text="Reactive Lighting" />
     <p className='text-left mb-4'>
       Can&apos;t afford a lighting tech at your venue, but want an interesting light show anyways? Try out my reactive lighting controls with multiple modes to suite your genre.
