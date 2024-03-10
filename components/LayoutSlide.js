@@ -9,7 +9,7 @@ export const SlideHeading = ({ text, punctuation = '.' }) => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='h2 mb-8 xl:mb-0 font-permanentMarker'
+        className='h2 mb-8 xl:mb-4 font-permanentMarker text-3xl xl:text-5xl'
       >
         {text} <span className='text-redpinkAccent'>{punctuation}</span>
     </motion.h2>
