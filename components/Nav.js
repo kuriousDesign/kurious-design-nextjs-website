@@ -36,7 +36,7 @@ const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
   return (
-    <nav className='flex flex-col items-center justify-center gap-y-4 fixed left-[1%] z-10 top-20 w-[230px] max-w-md'>
+    <nav className='flex flex-col items-center justify-center gap-y-4 fixed left-[0%] z-10 top-20 w-[230px] max-w-md'>
       {/* inner */}
       <div
         className='flex w-full flex-col items-left justify-center gap-y-10 px-0 h-max py-8 bg-white/10
@@ -47,7 +47,7 @@ const Nav = () => {
             <Link
               className={`${
                 link.path === pathname && 'text-accent'
-              } relative flex items-left group hover:text-redpinkAccent transition-all duration-300 w-auto ml-4`}
+              } relative flex items-left group hover:text-redpinkAccent transition-all duration-300 w-auto ml-9`}
               href={link.path}
               key={index}
             >
