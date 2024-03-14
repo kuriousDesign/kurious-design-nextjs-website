@@ -1,0 +1,329 @@
+{
+    "careerObjectiveSection": {
+        "heading": "Career Objective",
+        "description": "I am a self-driven, idea-thriving engineer & entrepreneur seeking a challenging and creative position in mechatronics. A hybrid, hands-on role between controls, mechanical, and electrical design would be ideal. Aspects of fabrication, prototyping and R&D also strongly desired. Looking for a company that is interested in in advanced control systems design, and more importantly  aligns with my design philosophy and is receptive to outside-the-box ideas;  I enjoy  team-leading and project management, customer interfacing and appreciate mentoring and being mentored; strong interest in bringing in new business and developing new products for a variety of markets, including interactive design and immersive art. Interested in a progressive company culture; very open to traveling and international relocation."
+    },
+    "contactInfo": {
+        "email": "gardner.761@gmail.com",
+        "location": "Denver, CO",
+        "phone": "319.931.3003",
+        "website": "kurious-design.com",
+        "github": "github.com/kuriousdesign"
+    },
+
+    "educationSection": {
+        "heading": "Education",
+        "education": [
+        {
+            "degree": "Master's",
+            "major": "M.S.M.E. - Mechatronics",
+            "university": "Universität Duisburg-Essen (UDE)",
+            "location": "Duisburg, Germany",
+            "gpa": "3.80 (1.2 German Scale)",
+            "startDate": "2010-08-01",
+            "endDate": "2012-10-01",
+            "description": "Thesis work in Biomechanics/Robotics. Curriculum focus in Robotics, Control System Design, Multibody dynamics, Machine Vision, Simulation/ Modeling Mechanical Systems; Program taught in German language; DAAD scholarship recipient, DSH-2 Proficiency (German language examination for university entrance)"
+        },
+        {
+            "degree": "Bachelor's",
+            "major": "B.S. Mechanical Engineering",
+            "university": "The Ohio State University (OSU)",
+            "location": "Columbus, Ohio",
+            "gpa": "3.73",
+            "startDate": "2005-09-01",
+            "endDate": "2010-06-01",
+            "description": "Graduated with Honors, Magna Cum Laude. Degree focus in Control Theory, Systems Dynamics and Product Design; Participant of Capstone Senior Design project, leadership experience as University Ambassador (tour guide), Summer Orientation Leader, Beat Michigan Week Event Planning Sub-Chair"
+        }
+        ]
+    },
+      
+    "skillsSection": {
+        "heading": "Skills",
+        "skillSets": [
+          {
+            "name": "Frontend",
+            "list": [
+              "HTML", "CSS", "JavaScript", "React",
+              "Nextjs", "Tailwindcss", "FramerMotion"
+            ]
+          },
+          {
+            "name": "Backend",
+            "list": [
+              "Node.js", "Express", "Node-OPCUA", "rclpynode",
+              "nodejs", "node-opcua", "websockets", "socket.io", "C#", ".NET"
+            ]
+          },
+          {
+            "name": "SoftwareDev",
+            "list": [
+              "Python", "JavaScript", "C++", "C#",
+              "ROS2", "Arduino", "MATLAB", "Simulink", "SQL", "git source control", "Linux", "Windows OS"
+            ]
+          },
+          {
+            "name": "Computer Vision",
+            "list": [
+              "OpenCV", "Mediapipe", "Keyence CV", "XG", "IV", "Vicon IR Reflective Motion Capture"
+            ]
+          },
+          {
+            "name": "Industrial Robotics Programming",
+            "list": [
+              "Fanuc", "Nachi", "ABB", "Kuka"
+            ]
+          },
+          {
+            "name": "Motion Control",
+            "list": [
+              "pneumatics", "servos", "steppers", "hydraulics", "robotics", "relays", "VFDs", "motor drives", "solenoids", "BLDC"
+            ]
+          },
+          {
+            "name": "Sensor Experience",
+            "list": [
+              "induct", "cap prox", "ultrasonic", "encoders", "photoelectric", "laser distance", "GPS", "IMU", "Lidar", "accelerometer"
+            ]
+          },
+          {
+            "name": "PLC Programming",
+            "list": [
+              "CoDeSys", "TwinCat", "Rockwell Automation", "Allen-Bradley RsLogix5000", "RSLogix500", "AutomationDirect Platforms"
+            ]
+          },
+          {
+            "name": "Mechanical Design",
+            "list": [
+              "SolidWorks", "multibody dynamics", "actuation selection and sizing (electromechanical, pneumatic, hydraulic)", "simulation", "modeling", "animation"
+            ]
+          },
+          {
+            "name": "Electrical Design",
+            "list": [
+              "schematic development in SkyCAD", "AutoCAD Electrical", "panel layout in SolidWorks", "NEC code", "NFPA 79", "cable design", "routing"
+            ]
+          },
+          {
+            "name": "Safety System Design",
+            "list": [
+              "safety risk assessment and risk mitigation design utilizing industrial-rated safety components"
+            ]
+          },
+          {
+            "name": "Customer Relations",
+            "list": [
+              "technical support", "fostering of customer relationships", "on-site operator training", "new business development", "recruit prospective customers"
+            ]
+          },
+          {
+            "name": "Project Management",
+            "list": [
+              "team leader", "budget and time estimation", "coordination of purchasing with lead times and deadlines", "automated BOM and purchasing documentation management via Excel", "consulting with colleagues whenever possible", "sensical to achieve highest quality outcomes (achieving strong group consensus)", "strong documentation skills including time", "budget management and user guide development", "testing reports", "design evolution tracking"
+            ]
+          },
+          {
+            "name": "Project Documentation",
+            "list": [
+              "functional design specifications", "Factory", "Site Acceptance Test plans", "User Guides", "interface design specifications", "proposals"
+            ]
+          },
+          {
+            "name": "Fabrication/Assembly",
+            "list": [
+              "electrical panel wiring", "building", "mechanical assembly", "milling", "other basic fabrication skills"
+            ]
+          },
+          {
+            "name": "Other",
+            "list": [
+              "sketching", "Microsoft Office", "baking", "grilling", "event planning", "pottery making", "interactive", "immersive art design"
+            ]
+          }
+        ]
+    },
+    "employmentSection": {
+        "heading": "Employment Experience",
+        "jobs": [
+          {
+            "title": "Independent Controls Engineer and Software Developer",
+            "company": "Kurious Design",
+            "location": "Denver, CO",
+            "startDate": "2019-12-01",
+            "endDate": "Present",
+            "description": "Course robotics design and development as well as multi-sensor/actuator system integration for interactive putt putt golf course. Designed animatronic shark with 2DOF (jaw and torso) that uses computer vision to trigger the shark from rest to animation. Additionally developed a console-style game that has 5+ custom mechanisms and is like 3D pinball with a golf ball, mixing projection mapping with physical motion as well. Light, sound and kinetic show that is all apart of a 60 sec race to complete the hole. Five holes in total had robotic elements for which I wrote the controls logic. Additionally, developed a real-time webapp for maintenance personnel to check on the status of the robotic elements of each hole, as well as perform setup tasks (like homing and zeroing motors). Core technologies (low-level motor control C++ using Teknic ClearCore or custom addressable LED lighting, solenoid pwm control, micro servo control. Process Control and low-level drivers written in Python encapsulated in ROS2 nodes. Ball-on-teebox detection written in Python utilizing opencv. Projection mapping and video game logic using PyGame. WebApp backend written using rclnodejs, node.js, socket.io. Frontend using reactjs, tailwindcss, redux and socket.io client.",
+            "projects": [
+              {
+                "name": "Motor Control for Automatic Bicycle Transmission",
+                "description": "PID Control of BLDC motor with absolute (single-turn) encoder feedback for use in automatic gear shifting. Code written in C++. Additionally developed a UI for demonstration purposes. Nodejs/ROS2/Reactjs ",
+                "skills": ["C++", "Python", "ROS2", "React", "Node.js", "Socket.io"],
+                "skillSets": ["Motion Control","Frontend", "Backend", "Software Development"]
+              },
+              {
+                "name": "Interactive Putt Putt Golf Course",
+                "description": "Course robotics design and development as well as multi-sensor/actuator system integration for interactive putt putt golf course. Designed animatronic shark with 2DOF (jaw and torso) that uses computer vision to trigger the shark from rest to animation. Additionally developed a console-style game that has 5+ custom mechanisms and is like 3D pinball with a golf ball, mixing projection mapping with physical motion as well. Light, sound and kinetic show that is all apart of a 60 sec race to complete the hole. Five holes in total had robotic elements for which I wrote the controls logic. Additionally, developed a real-time webapp for maintenance personnel to check on the status of the robotic elements of each hole, as well as perform setup tasks (like homing and zeroing motors).",
+                "skills": ["C++", "Python", "ROS2", "OpenCV", "React", "Node.js", "Socket.io"],
+                "skillSets": ["Mechanical Design", "Electrical Design","Frontend", "Backend", "Software Development"]
+              },
+              {
+                "name": "BoombleBee Art Installation",
+                "description": "Creative Prototype Design of Interactive Mechatronic Art project in 3 weeks from start to delivery. Custom designed mechanical and controls components for a electro-magnetically-actuated “BoombleBee” for use in an Spectra Art Space immersive art gallery in Denver, CO. The magic of the bee’s is that the buzzing of their wings is triggered acoustically by the beat of a specific tongue drum note (digital signal analysis using microphone and FFT). Developed version two with stinging thorax and internal lighting, proximity reactive. This was one of the toughest things to design because the thorax was a series of concentric spheres that had to slide together and also be assembly-friendly. HIdden tensioner inside the spine of the thorax for maintainability.",
+                "skills": ["Mechanical Design", "Electrical Design", "Python", "FFT Analysis"]
+              },
+              {
+                "name": "Fanuc Robotic Workcell",
+                "description": "Controls Engineer and Project Manager for 9-month Fanuc Robotic Workcell for Doosan Cnc Machine tending, Managed group of engineers for mechanical design and overhauled project management system, performed electrical system design, managed BOM and procurement and scheduling, developed firmware control of cell in CoDeSys, designed UI and project managed off-shore team to develop UI in React/NodeJS and co-developed as well, commissioned the system.",
+                "skills": ["Fanuc Robotics", "Project Management", "CoDeSys", "React", "Node.js"]
+              }
+            ]
+          },
+          {
+            "title": "Robotic Systems Engineer",
+            "company": "Stratom Inc",
+            "location": "Boulder, CO",
+            "startDate": "2020-05-01",
+            "endDate": "2020-09-01",
+            "description": "Design of robotic system architectures and integrating subsystems; Electrical system and mechanical design for robotics and autonomous vehicles. Developing and implementing wiring schematics and cable layouts; Selection of implementation of control systems and autonomous sensing platforms. Project experience with self-driving on-demand part delivery robot and cargo hauling vehicles entailing diesel-hydraulic propulsion and lidar-based feedback.",
+            "projects": [
+              {
+                "name": "Self-Driving Part Delivery Robot",
+                "description": "Project experience with self-driving on-demand part delivery robot and cargo hauling vehicles entailing diesel-hydraulic propulsion and lidar-based feedback.",
+                "skills": ["Robotics", "Autonomous Vehicles", "Lidar"]
+              }
+            ]
+          },
+          {
+            "title": "Automation Design Engineer",
+            "company": "Concept Systems Inc",
+            "location": "Albany, OR (Worked remotely from Denver, CO)",
+            "startDate": "2017-10-01",
+            "endDate": "2020-01-01",
+            "description": "System integration entailing programming of control systems integrating A-B PLCs, HMI, motor drives;  Fanuc programming of three-robot cell. Mechanical design of custom tooling in SolidWorks; electrical design and component selection, BOM management, safety analysis and design.",
+            "projects": [
+              {
+                "name": "Three-Robot Cell Integration",
+                "description": "Fanuc programming of three-robot cell. Mechanical design of custom tooling in SolidWorks; electrical design and component selection, BOM management, safety analysis and design.",
+                "skills": ["PLC Programming", "Fanuc Robotics", "SolidWorks"]
+              }
+            ]
+          },
+          {
+            "title": "Mechatronics Design Engineer",
+            "company": "Adaptive Innovations Corp",
+            "location": "Lakewood, Colorado",
+            "startDate": "2015-02-01",
+            "endDate": "2017-10-01",
+            "description": "Mechanical, electrical and controls system design of industrial automation equipment, including multi-station assembly robotic cells, product life-cycle testing machines, machine-tending robots. Develop control architecture for multi-station sequencers: manual/auto/diagnostic modes, collision avoidance, diagnostics and troubleshooting assistance, error management and E-Stop recovery.",
+            "projects": [
+              {
+                "name": "Multi-Station Assembly Robotic Cells",
+                "description": "Mechanical, electrical and controls system design of multi-station assembly robotic cells. Develop control architecture for multi-station sequencers: manual/auto/diagnostic modes, collision avoidance, diagnostics and troubleshooting assistance, error management and E-Stop recovery.",
+                "skills": ["Mechatronics", "Industrial Automation", "PLC Programming"]
+              }
+            ]
+          },
+          {
+            "title": "Application Engineer",
+            "company": "Vicon Motion Systems",
+            "location": "Centennial, Colorado",
+            "startDate": "2014-03-01",
+            "endDate": "2014-07-01",
+            "description": "Provided technical support to customer for 3D motion capturing systems used for life sciences, entertainment, and university research. Developed and wrote MATLAB race car game for demo which integrated real-time Vicon software output of car positions from toy race track.",
+            "projects": [
+              {
+                "name": "3D Motion Capturing Systems",
+                "description": "Provided technical support to customer for 3D motion capturing systems used for life sciences, entertainment, and university research. Developed and wrote MATLAB race car game for demo which integrated real-time Vicon software output of car positions from toy race track.",
+                "skills": ["Technical Support", "MATLAB"]
+              }
+            ]
+          },
+          {
+            "title": "Automation Development Engineer",
+            "company": "Monsanto",
+            "location": "Ankeny, Iowa",
+            "startDate": "2013-01-01",
+            "endDate": "2014-02-01",
+            "description": "Responsible for design, development, assembly, testing, debugging, implementation, support and enhancement of prototype machines for agricultural research. Design parts and create technical drawings in SolidWorks; Perform design evaluations and redesign of prototype machines for mass production.",
+            "projects": [
+              {
+                "name": "Prototype Machines for Agricultural Research",
+                "description": "Responsible for design, development, assembly, testing, debugging, implementation, support and enhancement of prototype machines for agricultural research. Design parts and create technical drawings in SolidWorks; Perform design evaluations and redesign of prototype machines for mass production.",
+                "skills": ["SolidWorks", "Prototype Development"]
+              }
+            ]
+          },
+          {
+            "title": "Research in Science and Engineering Intern",
+            "company": "German Academic Exchange Service (DAAD)",
+            "location": "UDE, Duisburg, Germany",
+            "startDate": "2008-06-01",
+            "endDate": "2008-09-01",
+            "description": "Participated in a summer internship abroad developing ground-force sensors for an autonomous, static-walking robot. Modeled system behavior in MATLAB/ Simulink; Designed and built functioning prototype with signal amplification.",
+            "projects": [
+              {
+                "name": "Ground-force Sensors for Autonomous Robot",
+                "description": "Participated in a summer internship abroad developing ground-force sensors for an autonomous, static-walking robot. Modeled system behavior in MATLAB/ Simulink; Designed and built functioning prototype with signal amplification.",
+                "skills": ["MATLAB", "Signal Processing"]
+              }
+            ]
+          },
+          {
+            "title": "Manufacturing and Development Engineer Intern",
+            "company": "Club Car Inc.",
+            "location": "Augusta, GA",
+            "startDate": "2007-12-01",
+            "endDate": "2008-03-01",
+            "description": "Launch team member of new 4x4 utility vehicle; Prepared existing assembly line for integration of new vehicle by modifying previous manufacturing assembly sequence and designed and created technical drawings for new assembly fixtures for the assembly line using SolidWorks.",
+            "projects": [
+              {
+                "name": "4x4 Utility Vehicle Launch",
+                "description": "Launch team member of new 4x4 utility vehicle; Prepared existing assembly line for integration of new vehicle by modifying previous manufacturing assembly sequence and designed and created technical drawings for new assembly fixtures for the assembly line using SolidWorks.",
+                "skills": ["Manufacturing Engineering", "Assembly Line Optimization", "SolidWorks"]
+              }
+            ]
+          },
+          {
+            "title": "Development Engineer Intern",
+            "company": "Tyco Electronics",
+            "location": "Winston-Salem, NC",
+            "startDate": "2007-06-01",
+            "endDate": "2007-09-01",
+            "description": "Developed automotive seat position sensor concepts in Pro-E; Performed product verification tests on prototype brake position sensors results analysis. Designed and prepared technical drawings for sensor mounting brackets and its testing apparatus in Pro-E.",
+            "projects": [
+              {
+                "name": "Automotive Seat Position Sensor",
+                "description": "Developed automotive seat position sensor concepts in Pro-E; Performed product verification tests on prototype brake position sensors results analysis. Designed and prepared technical drawings for sensor mounting brackets and its testing apparatus in Pro-E.",
+                "skills": ["Pro-E", "Sensor Design", "Product Testing"]
+              }
+            ]
+          }
+        ]
+    },
+    "academicExperienceSection": {
+          "heading": "Academic Experience",
+          "entries": [
+            {
+              "title": "Master Thesis",
+              "department": "UDE Department of Mechanics and Robotics",
+              "location": "Duisburg, Germany",
+              "startDate": "2012-01-01",
+              "endDate": "2012-10-01",
+              "description": "\"Determination and Analysis of Kinematic Throwing Parameters for Varying Target Position for 2-DOF Overhead Throwing\". Independently conceived, designed, and managed project with minimal guidance from adviser; Acquired data using motion capturing system then converted and processed data in self-written MATLAB program which utilized pattern recognition techniques to detect phase transition times for each throw. Built simulation models to resolve kinematics and dynamics of the throw using MATLAB/Simulink, verified accuracy using ADAMS and SolidWorks. Investigated adaptive control to be used on a robot arm including iterative learning to facilitate an investigation of human motor control mechanisms."
+            },
+            {
+              "title": "Miscellaneous Projects during Master’s Program",
+              "department": "UDE",
+              "location": "Duisburg, Germany",
+              "startDate": "2010-08-01",
+              "endDate": "2012-05-01",
+              "description": "Designed and simulated predictive controller for an automated meat smoker in MATLAB/Simulink and identified suitable heat source and sensors. Designed controller for automatic cocktail machine in MATLAB/Simulink/Stateflow as well as an GUI for simulation of machine. Worked on vehicle dynamics simulator project; adapted button-dependent output from steering wheel for controls to be used with xPC Target system."
+            },
+            {
+              "title": "Capstone Design Project",
+              "department": "OSU/Rockwell Automation (RA)",
+              "startDate": "2009-09-01",
+              "endDate": "2010-06-01",
+              "description": "Team designed and constructed Rube-Goldberg machine to demonstrate capabilities of automation components from Allen-Bradley/RA. Served as team leader: managed progress between interdisciplinary team members, orchestrated completion of deadlines, and organized communication."
+            }
+          ]
+    }
+}

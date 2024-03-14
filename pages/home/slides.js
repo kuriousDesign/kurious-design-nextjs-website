@@ -169,6 +169,25 @@ const slideSpotlight = (
 </LayoutSlide>
 );
 
+
+const slideResume = (
+  <LayoutSlide className=" bg-gray-800">
+  <div className='max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw]'>
+    <SlideHeading text="About my Experience" />
+    <p className='text-center xl:text-left mb-10'>
+      Check out my work and academic background using my interactive resume.
+    </p>
+    <div className='mt-10 xl:mt-40 flex justify-center z-50'>
+        <Link href={'/about/resume'}>
+          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-white text-green-800 text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:bg-transparent hover:scale-105 ]">
+            RESUME
+          </button>
+        </Link>
+    </div>
+  </div>
+</LayoutSlide>
+);
+
 export const HomeSlides = [
   slideFirst,
   slideSpotlight,
@@ -177,6 +196,7 @@ export const HomeSlides = [
   slideGamify,
   slideServices,
   slideActiveProjects,
+  slideResume,
 
 ];
 

@@ -40,3 +40,15 @@ Electric Design and Schematics for 480/240/120 VAC and Low-Voltage DC. Safe elec
 
 System Integration Software - connecting multiple devices, controls, lights, computers, etc. together to work synchronously
 
+
+
+## HOW TO INTEGRATE A SYSTEM
+
+Reduce number of communication protocols where possible
+Reuseable interfacing that has similar behavior and meaning for it's state (KILLED/INACTIVE/RESETTING/IDLE/RUNNING/ERROR/STOPPING/ABORTING)
+Learn new technologies and communication protocols
+Scour the documentation and befriend the tech support of new technologies
+Put on your problem-solving and troubleshooting hats
+Plan for failure of hardware and software
+Do some Yoga
+
