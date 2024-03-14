@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-const ProjectSlide = ({projectId, projectData, key}) => {
+const ProjectSlide = ({projectId, projectData}) => {
     const projectIdString = projectId ? projectId.toString(): '';
     const title = projectData ? projectData.title : '';
     const thumbUrl = projectData ? projectData.thumbUrl : '';
     const quickBlurb = projectData ? projectData.quickBlurb : '';
     return (
-        <div className="w-full h-full flex items-center justify-center bg-purple-900">
-            <Link href={`/portfolio/${projectIdString}`} key={key}>
+        <div className="w-full h-full flex items-center justify-center bg-purple-900" >
+            <Link href={`/portfolio/${projectIdString}`} >
                 <div className='flex flex-col items-center gap-x-8 h-full px-16'>
                 {/* avatar, name, position */}
                 <div className='w-full max-w-[600px] flex flex-col items-center relative mx-auto justify-center pt-4'>

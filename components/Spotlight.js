@@ -184,7 +184,7 @@ const beamAnglePositiveMobile = 40;
             <AssemblyComponents />
         </motion.div>
         <div className="absolute top-[200px] -left-[190px] xl:top-[290px] xl:-left-[480px] text-gray-800 w-36 h-auto font-extrabold ">
-            COOL SHIT!
+            FOLLOW MUSICIAN
         </div>
         <div className="absolute top-[210px] left-[110px] xl:top-[470px] xl:left-[270px] text-gray-800 w-36 h-auto font-extrabold ">
             BEAT/TONE REACTIVE

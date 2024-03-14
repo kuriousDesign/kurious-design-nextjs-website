@@ -9,6 +9,7 @@ const LazyYoutube = ({ videoId, height=300, width=400 }) => {
     width: width.toString(), 
     playerVars: { 
       autoplay: 1, 
+      modestbranding: 1,
     }, 
   }; 
 
