@@ -39,11 +39,14 @@ const longCang = Long_Cang({
 });
 
 
-
+let isScrollable = false;
 const Layout = ({ children }) => {
   const router = useRouter();
-  // const [isSplash, setIsSplash] = useState(router.pathname === '/');
-  const isSplash = router.pathname === '/';
+  const [isSplash, setIsSplash] = useState(router.pathname === '/');
+  if (router.pathname === '/about/resume'){
+    isScrollable = true;;
+  }
+
   useEffect(() => {
 
     return () => {
@@ -53,7 +56,7 @@ const Layout = ({ children }) => {
 
   return (
     <div
-      className={`page bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
+      className={`${isScrollable? '': 'page'} bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
       <Head> {/* Add Head component here */}
         <link rel="icon" href="/logo.ico" /> {/* Replace "your-favicon.ico" with your favicon file path */}
