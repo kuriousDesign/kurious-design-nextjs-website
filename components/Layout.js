@@ -40,23 +40,21 @@ const longCang = Long_Cang({
 
 
 let isScrollable = false;
+let isSplash = false;
 const Layout = ({ children }) => {
   const router = useRouter();
-  const [isSplash, setIsSplash] = useState(router.pathname === '/');
-  if (router.pathname === '/about/resume'){
-    isScrollable = true;;
-  }
+  const [isScrollable, setIsScrollable] = useState(false);
+  const [isSplash, setIsSplash] = useState(false);
 
   useEffect(() => {
+    setIsScrollable(router.pathname === '/about/resume');
+    setIsSplash(router.pathname === '/');
+  }, [router.pathname]);
 
-    return () => {
-      // router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
 
   return (
     <div
-      className={`${isScrollable? '': 'page'} bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
+      className={`page ${!isScrollable && 'overflow-hidden'} bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
       <Head> {/* Add Head component here */}
         <link rel="icon" href="/logo.ico" /> {/* Replace "your-favicon.ico" with your favicon file path */}
