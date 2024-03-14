@@ -13,7 +13,9 @@ const Resume = () => {
 
   return (
     <div className='w-full pt-[100px] bg-black overflow-scroll'>
-      <ResumeSection sectionData={careerObjectiveSection} bgColor='black'  />
+      <ResumeSection sectionData={careerObjectiveSection} bgColor='black'>
+        <p>{careerObjectiveSection.description}</p>
+      </ResumeSection>
       <ResumeSection sectionData={educationSection} bgColor='black' textColor='white'>
         <ul>
           {educationSection.education.map((education, index) => (
