@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { SvgRing } from '../../components/OversizedRing';
+import Image from 'next/image';
 
 // variants
 const imageVariants = {
@@ -22,7 +23,27 @@ const imageVariants = {
   },
 };
 
-const Splash = () => {
+const JakesCartoonHouse = () => {
+  return (
+    <div className='w-full h-full flex items-center justify-center overflow-hidden '>
+   
+        {/* image */}
+        <div className=' w-[550px] h-[550px] rounded-full overflow-hidden' >
+          <div className='h-[550px] aspect-auto'>
+          <Image className=' w-auto object-cover h-full' src='/house-cover.jpg' width={4032} height={3022} alt='' />
+          </div>
+        
+        </div>
+    
+    </div>
+  );
+};
+
+
+
+
+
+const JakesHousePage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [displayStateReq, setDisplayStateReq] = useState(0); // Initial display state
 
@@ -93,23 +114,15 @@ const Splash = () => {
       <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-auto h-auto'>
         <SvgRing outerDiameterPx={750} thicknessPx={100} color='#ff0000' opacity={0.70}/>
       </div>
-      
-      <div className='absolute top-1/2 transform -translate-y-1/2 left-0 w-full h-[397px]'>
-        <motion.div
-          variants={imageVariants}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          transition={{ delay: 3.0, duration: 3.0, ease: 'easeIn' }}
-          className='relative w-[443px] h-[397px] transform scale-90 sm:scale-100  left-1/2 -translate-x-1/2  '
-        >
-          {"JAKE'S HOUSE"}
-        </motion.div>
+      <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-auto h-auto'>
+        <JakesCartoonHouse />
       </div>
+      
+
       <div className='absolute w-full h-auto bottom-24 xl:bottom-14 flex justify-center gap-10 z-50'>
-        <Link href={'/home'}>
+        <Link href={'/jakes-house/welcome'}>
           <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:scale-105 ]">
-            I&apos;M KURIOUS
+            {"ENTER!"}
           </button>
         </Link>
         {isVisible && (
@@ -122,4 +135,4 @@ const Splash = () => {
   );
 };
 
-export default Splash;
+export default JakesHousePage;

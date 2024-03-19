@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../../variants';
 import HousePhotoSlide from '../HousePhotoSlide';
 import { useEffect, useState } from 'react';
+import LayoutSlide, { SlideHeading } from '../../../components/LayoutSlide';
+import LazyYoutube from '../../../components/LazyYoutube';
 
 const SlideFirst = () => (
     <div className='h-full bg-gray-800 py-32 text-center'>
@@ -20,7 +22,27 @@ const SlideFirst = () => (
     </div>
   );
 
-function Slides() {
+  const SlideVideoTour = ()=> {
+    return(
+    <LayoutSlide className="bg-red-600">
+        
+        <div className='flex flex-col xl:flex-row gap-x-8'>
+        <SlideHeading text="Take the tour" />
+          {/* youtube */}
+          <div className="w-full mx-auto flex justify-center max-w-[600px] py-16">
+            <LazyYoutube videoId={"FA6_FkhvPnI?si"}/>
+          </div>
+          {/* text */}
+          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+
+          </div>
+      </div>
+    </LayoutSlide>
+  
+    );
+  };
+
+const Slides = () => {
     const [photoUrls, setPhotoUrls] = useState([]);
     const [slides, setSlides] = useState([]);
   
@@ -33,6 +55,7 @@ function Slides() {
           const slidesArray = data.photoUrls.map(function(url, index) {
             return <HousePhotoSlide url={url} key={index} />;
           });
+          slidesArray.unshift(<SlideVideoTour key="slide-video-tour" />);
           slidesArray.unshift(<SlideFirst key="slide-first" />);
           setSlides(slidesArray);
           setPhotoUrls(data.photoUrls);
