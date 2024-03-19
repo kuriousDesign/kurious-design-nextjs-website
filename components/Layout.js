@@ -39,8 +39,6 @@ const longCang = Long_Cang({
 });
 
 
-let isScrollable = false;
-let isSplash = false;
 const Layout = ({ children }) => {
   const router = useRouter();
   const [isScrollable, setIsScrollable] = useState(false);
@@ -48,7 +46,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     setIsScrollable(router.pathname === '/about/resume');
-    setIsSplash(router.pathname === '/');
+    setIsSplash(router.pathname === '/' || router.pathname.startsWith('/jakes-house'));
   }, [router.pathname]);
 
 
