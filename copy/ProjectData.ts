@@ -126,9 +126,9 @@ export const projectMap: Map<ProjectId, ProjectData> = new Map([
   [
     ProjectId.URBANPUTTCOURSE,
     {
-      title: "The UrbanPutt Course",
+      title: "The Urban Putt Course",
       thumbUrl: "/thumb_urbanputtcourse.jpg",
-      quickBlurb: "Camera-triggered anamatronic shark that you have to putt your ball into. Be careful when you retrive the ball from his mouth, he might bite!",
+      quickBlurb: "Coordinated motion control on 4 different holes as well as a course app for maintenance personnel for troubleshooting and setup.",
       youtubeEmbedId: "cACM1BodfRw",
       youtubePlaylistUrl: "https://youtube.com/playlist?list=PLy1rmiokprECUNV190g_L2cmQc_acPOAS&si=uQVRpXm_9zdrlcIl",
       bgColor: "#FFFFFF",
