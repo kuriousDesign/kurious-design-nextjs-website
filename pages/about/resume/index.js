@@ -1,5 +1,22 @@
 import ResumeSection from './ResumeSection';
 import resumeData from './resumeData.json';
+import axios from 'axios';
+
+
+const handleDownloadPDF = async () => {
+  try {
+    const response = await axios.get('/api/download-resume', { responseType: 'blob' });
+    const blob = new Blob([response.data], { type: 'application/pdf' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'resume.pdf';
+    link.click();
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Error downloading PDF:', error);
+  }
+};
 
 const DisplayDate = ( dateString ) => {
   const date =  new Date(dateString).toLocaleDateString("en-US", {month: "long", year: "numeric"});
@@ -79,6 +96,9 @@ const Resume = () => {
           ))}
         </div>
       </ResumeSection>
+      <div className='fixed bottom-5 right-5 w-[50px] h-[50px] rounded-full bg-white bg-opacity-80 text-black text-center align-middle animate-pulse z-50'>
+        <button className='h-full w-full' onClick={handleDownloadPDF}>PDF</button>
+      </div>
     </div>
     
   );
