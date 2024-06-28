@@ -6,6 +6,7 @@ export enum ProjectId {
   SHARKHOLE = 'sharkhole',
   URBANPUTTCOURSE = 'urbanputtcourse',
   STREETARTMURALE = 'streetartmurale',
+  CRYSTALCAVE = 'crystalcave',
 }
 
 export enum TechId {
@@ -17,6 +18,7 @@ export enum TechId {
   NOVELMECHANICAL = 'novelMechanicalDesign',
   NOVELELECTRICAL = 'novelElectricalDesign',
   ELECTROMECHANICAL = 'electroMechanical',
+  INTERACTIVESOUND = 'interactiveSound',
 }
 
 export enum ToolId {
@@ -135,6 +137,22 @@ export const projectMap: Map<ProjectId, ProjectData> = new Map([
       techTags: [TechId.MOTIONCONTROL, TechId.LIGHTINGCONTROL, TechId.ELECTROMECHANICAL],
       taskTags: [TaskId.MECHANICAL, TaskId.ASSEMBLY, TaskId.ELECTRICAL, TaskId.FABRICATION, TaskId.PROCESSCONTROLDEV, TaskId.FIRMWAREDEV, TaskId.FULLSTACKDEV],
       toolTags: [ToolId.ROS2, ToolId.ARDUINO, ToolId.MEDIAPIPE, ToolId.CPP],
+      description: "",
+      comments: "",
+    },
+  ],
+  [
+    ProjectId.CRYSTALCAVE,
+    {
+      title: "The Crystal Cave",
+      thumbUrl: "/thumb_crystalcave.jpg",
+      quickBlurb: "A mystical and interactive cave that provides a mesmorizing light and sound show with your help. The mushroom cove is controlled by a computer vision system that tracks your hand movements. There is generative music creation linking the hand movements to active running instance of Digital Audio Workstation.",
+      youtubeEmbedId: "9SjiYsy5BOQ",
+      youtubePlaylistUrl: "https://www.youtube.com/playlist?list=PLy1rmiokprEBTQwizG7hvANFG4e-QsOj7",
+      bgColor: "#FFFFFF",
+      techTags: [TechId.LIGHTINGCONTROL, TechId.COMPUTERVISION, TechId.ACOUSTICDETECTION, TechId.NOVELELECTRICAL, TechId.INTERACTIVESOUND],
+      taskTags: [TaskId.MECHANICAL, TaskId.ASSEMBLY, TaskId.ELECTRICAL, TaskId.FABRICATION, TaskId.PROCESSCONTROLDEV, TaskId.FIRMWAREDEV, TaskId.FULLSTACKDEV],
+      toolTags: [ToolId.ROS2, ToolId.OPENCV, ToolId.MEDIAPIPE, ToolId.CPP, ToolId.ARDUINO, ToolId.PYGAME],
       description: "",
       comments: "",
     },
