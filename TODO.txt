@@ -1,6 +1,6 @@
 STATUS      DESCRIPTION
             make multiple splash page (all white background with x-ray looking logo, dark theme)
-
+            draw influence from spotify developers page
 
 
 
