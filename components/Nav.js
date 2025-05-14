@@ -40,7 +40,7 @@ const Nav = () => {
       {/* inner */}
       <div
         className='flex w-full flex-col items-left justify-center gap-y-10 px-0 h-max py-8 bg-black/70
-      backdrop-blur-sm rounded-r-full font-longCang text-[26px] font-medium tracking-widest uppercase'
+        backdrop-blur-sm rounded-r-full font-permanentMarker text-[16px] font-thin tracking-widest uppercase'
       >
         {navData.map((link, index) => {
           return (
@@ -60,7 +60,7 @@ const Nav = () => {
                   <div 
                     className={`${
                       link.path === pathname && 'text-redpinkAccent'
-                    } leading-none`}>
+                    } leading-none py-2 pl-1`}>
                     {link.name}
                   </div>
                 </div>
