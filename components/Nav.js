@@ -40,7 +40,7 @@ const Nav = () => {
       {/* inner */}
       <div
         className='flex w-full flex-col items-left justify-center gap-y-10 px-0 h-max py-8 bg-black/70
-      backdrop-blur-sm rounded-r-full font-longCang text-[26px] font-medium tracking-widest'
+      backdrop-blur-sm rounded-r-full font-longCang text-[26px] font-medium tracking-widest uppercase'
       >
         {navData.map((link, index) => {
           return (
@@ -56,7 +56,7 @@ const Nav = () => {
 
               {/* tooltip */}
               <div className='absolute pr-10 left-10'>
-                <div className=' relative flex items-center p-[6px] rounded-[3px]'>
+                <div className=' relative flex items-center pl-[4px] rounded-[3px]'>
                   <div 
                     className={`${
                       link.path === pathname && 'text-redpinkAccent'
