@@ -21,14 +21,15 @@ const slideFirst = (
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='h2 mb-8 xl:mb-0 font-permanentMarker'
+        className='h2 mb-8 font-permanentMarker'
       >
         Seek simple<span className='text-redpinkAccent'>.</span>
-        
       </motion.h2>
-      <p className="h2 font-permanentMarker">kuriosity</p>
-      <p className="h2 font-permanentMarker">kills</p>
-      <p className="h2 font-permanentMarker">komplexity</p>
+      <div className='-space-y-1'>
+        <p className="font-permanentMarker my-0 h2">kuriosity</p>
+        <p className="font-permanentMarker my-0 h2">kills</p>
+        <p className="font-permanentMarker my-0 h2">komplexity</p>
+      </div>
     </div>
   </div>
 );
