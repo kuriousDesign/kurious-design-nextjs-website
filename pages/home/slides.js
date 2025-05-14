@@ -11,6 +11,8 @@ import ServicesList from './ServicesList';
 import SpotlightAnimation from '../../components/Spotlight';
 import Link from 'next/link';
 
+import OrientationInfo from '../../components/OrientationInfo';
+
 
 const slideFirst = (
   <div className='h-full bg-gray-800 py-32 text-center'>
@@ -31,6 +33,10 @@ const slideFirst = (
         <p className="font-permanentMarker my-0 h2">komplexity</p>
       </div>
     </div>
+    <div className="fixed bottom-20 left-0 flex items-center justify-center w-full">
+      <OrientationInfo />
+    </div>
+    
   </div>
 );
 

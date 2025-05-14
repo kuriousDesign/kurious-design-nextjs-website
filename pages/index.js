@@ -116,7 +116,7 @@ const Splash = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          transition={{ delay: 3.0, duration: 3.0, ease: 'easeIn' }}
+          transition={{ delay: .3, duration: .2, ease: 'easeIn' }}
           className='relative w-[443px] h-[397px] transform scale-90 sm:scale-100  left-1/2 -translate-x-1/2  '
         >
           <KuriousLogoAnimation displayStateReqInput={displayStateReq} />
