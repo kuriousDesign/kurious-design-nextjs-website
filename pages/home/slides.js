@@ -81,7 +81,7 @@ const slideServices = (
  
       <div className='mt-10 xl:mt-10 flex justify-start z-50'>
         <Link href={'/services'}>
-          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-white text-gray-800 text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-redpinkAccent hover:text-redpinkAccent hover:bg-transparent hover:scale-105 ]">
+          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-white text-gray-800 text-[13px] tracking-wider xl:text-xs font-bold font-permanentMarker hover:ring-redpinkAccent hover:text-redpinkAccent hover:bg-transparent hover:scale-105 ]">
             SERVICES
           </button>
         </Link>
@@ -120,14 +120,14 @@ const slideReactiveLighting = (
 const slideResume = (
   <LayoutSlide className=" bg-black">
   <div className='w-7/8 max-w-[900px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
-  <SlideHeading text="About my Experience" />
+  <SlideHeading text="record of expertise" />
     <p className='text-lg md:text-lg'>
       Check out my work and academic background using my interactive resume.
     </p>
     <div className='mt-10 flex justify-left z-50'>
         <Link href={'/about/resume'}>
-          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-white text-black text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:bg-transparent hover:scale-105 ]">
-            RESUME
+          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-white text-black text-[13px] tracking-wider xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:bg-transparent hover:scale-105 ]">
+            RÉSUMÉ
           </button>
         </Link>
     </div>
