@@ -34,7 +34,7 @@ const Socials = () => {
   return (
     <div>
       <SocialsBackgroundMobile />
-      <div className='z-50 fixed bottom-3 xl:bottom-5 left-1/2 -translate-x-1/2 w-[200px] h-auto flex flex-row justify-between items-center'>
+      <div className='z-50 fixed bottom-3 xl:bottom-5 left-1/2 -translate-x-1/2 w-[160px] h-auto flex flex-row justify-between items-center'>
         <Link href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer"className='hover:text-accent transition-all duration-300 flex items-center'>
           <AiFillYoutube className='w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]' />
         </Link>
