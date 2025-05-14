@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
 
   return (
     <div
-      className={`page ${!isScrollable && 'overflow-hidden'} bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
+      className={`page h-screen w-screen ${!isScrollable && 'overflow-hidden'} bg-blue-950 text-white  ${sora.variable} font-sora ${permanentMarker.variable} font-permanentMarker ${longCang.variable} font-longCang ${gothamBook.variable} font-gothamBook relative`}
     >
       <Head> {/* Add Head component here */}
         <link rel="icon" href="/logo.ico" /> {/* Replace "your-favicon.ico" with your favicon file path */}

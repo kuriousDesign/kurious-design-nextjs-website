@@ -87,7 +87,7 @@ const Splash = () => {
 
 
   return (
-    <div className='w-full h-full bg-blue flex overflow-hidden'>
+    <div className='w-screen h-screen bg-blue flex overflow-hidden'>
       <div className={`absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-black bg-opacity-0`} />
       <div className='absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-full h-auto '>
         <motion.div 
