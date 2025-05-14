@@ -163,7 +163,7 @@ const beamAnglePositiveMobile = 40;
   
   export const SpotlightAnimation = () => {
     return (
-      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px] transform scale-[80%] xl:scale-90`}>
+      <div className={`relative w-[${svgWidth}px] h-[${svgHeight}px] transform scale-[80%] xl:scale-90 font-permanentMarker`}>
         <StaticComponents />
         <motion.div
           className={`hidden xl:block absolute top-0 left-0 w-[${svgWidth}px] h-[${svgHeight}px]`}
@@ -183,10 +183,10 @@ const beamAnglePositiveMobile = 40;
         >
             <AssemblyComponents />
         </motion.div>
-        <div className="absolute top-[200px] -left-[190px] xl:top-[290px] xl:-left-[480px] text-gray-800 w-36 h-auto font-extrabold ">
+        <div className="absolute top-[180px] -left-[170px] xl:top-[290px] xl:-left-[480px] text-gray-800 w-36 h-auto font-extrabold ">
             FOLLOW MUSICIAN
         </div>
-        <div className="absolute top-[210px] left-[110px] xl:top-[470px] xl:left-[270px] text-gray-800 w-36 h-auto font-extrabold ">
+        <div className="absolute top-[210px] left-[120px] xl:top-[470px] xl:left-[270px] text-gray-800 w-36 h-auto font-extrabold ">
             BEAT/TONE REACTIVE
         </div>
       </div>

@@ -23,7 +23,7 @@ const LayoutSwiper = ({ slides }) => {
         "--swiper-pagination-color": "#FFBA08",
         "--swiper-pagination-bullet-inactive-color": "#000",
         "--swiper-pagination-bullet-inactive-opacity": ".4",
-        "--swiper-pagination-bullet-size": "14px",
+        "--swiper-pagination-bullet-size": "11px",
         "--swiper-pagination-bullet-horizontal-gap": "6px",
         "--swiper-pagination-color": "#ff0062",
         "--swiper-pagination-left": "8px",

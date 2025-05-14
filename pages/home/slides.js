@@ -37,7 +37,7 @@ const slideArtMeetsRobotics = (
   <LayoutSlide className="bg-indigo-950">
   <div className='w-3/4 max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text="Art meets Robotics" />
-      <p>
+      <p className='text-base md:text-lg'>
         Let me help design your next interactive creation and inject some robotic horsepower.
         Who said engineers can&apos;t be artists?
       </p>
@@ -49,7 +49,7 @@ const slideItsAlive = (
   <LayoutSlide className="bg-purple-900">
   <div className='w-3/4 max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text={"It's Alive"} punctuation="!" />
-      <p>
+      <p className='text-base md:text-lg'>
         Bring some life to your bar, restaurant, venue, hotel or home.
         I can make your existing space more interactive and fun, even using your existing devices.
       </p>
@@ -62,7 +62,7 @@ const slideGamify = (
   <LayoutSlide className="bg-purple-800">
   <div className='w-3/4 max-w-[800px] flex flex-col justify-left items-left h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text={"Gamify your Space"} punctuation="!" />
-      <p className=''>
+      <p className='text-base md:text-lg'>
         With a little bit of code and some hardware, I can turn your space into a game.
         The budget is friendlier than you think.
       </p>
@@ -74,7 +74,7 @@ const slideServices = (
   <LayoutSlide className="bg-gray-800">
     <div className='max-w-[800px] flex flex-col justify-start items-start h-[70vh] mt-[15vh] mb-auto mx-[20vw] text-left'>
       <SlideHeading text="Jake-of-all-trades" />
-      <p className='self-start mb-4'>
+      <p className='text-base md:text-lg'>
         I&apos;m a creative engineer, roboticist, full-stack developer, and a Jake. Here is a list of the services I offer.
       </p>
  
@@ -93,8 +93,8 @@ const slideActiveProjects = (
   <LayoutSlide className="bg-gray-800">
   <div className='w-3/4 max-w-[800px] flex flex-col justify-start items-start h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text="Recent Projects" />
-      <p className='text-left xl:text-left mb-10'>
-        Here is a list of what I&apos;ve been tinkering on.
+      <p className='text-base md:text-lg mb-10'>
+        Kurious what I&apos;ve been up to... Here is what I&apos;ve been tinkering on.
       </p>
       <ActiveProjectsList />
 
@@ -107,7 +107,7 @@ const slideReactiveLighting = (
   <LayoutSlide className=" bg-black">
   <div className='w-3/4 max-w-[800px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text="Reactive Lighting" />
-    <p className='text-left xl:text-left mb-10'>
+    <p className='text-base md:text-lg'>
       Can&apos;t afford a lighting tech at your venue, but want an interesting light show anyways? Try out my reactive lighting controls with multiple modes to suite your genre.
     </p>
     <SpotlightAnimation />
@@ -120,7 +120,7 @@ const slideResume = (
   <LayoutSlide className=" bg-black">
   <div className='max-w-[800px] flex flex-col justify-start items-start h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
     <SlideHeading text="About my Experience" />
-    <p className='mb-10'>
+    <p className='text-base md:text-lg'>
       Check out my work and academic background using my interactive resume.
     </p>
     <div className='mt-10 flex justify-center z-50'>

@@ -9,7 +9,7 @@ export const SlideHeading = ({ text, punctuation = '.' }) => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='w-full h2 mb-8 xl:mb-4 font-longCang text-[42px] xl:text-7xl lowercase font-thin'
+        className='w-full h2 mb-4 xl:mb-4 font-longCang text-[42px] xl:text-7xl lowercase font-thin'
         style={{ wordSpacing: '-0.2em' }}
       >
         {text}<span className='text-redpinkAccent'>{punctuation}</span>
