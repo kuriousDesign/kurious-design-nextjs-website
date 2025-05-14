@@ -50,7 +50,7 @@ const slideItsAlive = (
   <LayoutSlide className="bg-purple-900">
   <div className='w-7/8 max-w-[900px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
   <SlideHeading text={"It's Alive"} punctuation="!" />
-      <p className='text-base md:text-lg'>
+      <p className='text-lg md:text-lg'>
         Bring some life to your bar, restaurant, venue, hotel or home.
         I can make your existing space more interactive and fun, even using your existing devices.
       </p>
