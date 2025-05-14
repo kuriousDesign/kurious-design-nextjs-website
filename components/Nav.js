@@ -36,17 +36,17 @@ const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
   return (
-    <nav className='flex flex-col items-center justify-center gap-y-4 fixed left-[0%] z-10 top-20 w-[230px] max-w-md'>
+    <nav className='flex flex-col items-center justify-center gap-y-4 fixed left-[0%] z-10 top-20 w-[340px]'>
       {/* inner */}
       <div
-        className='flex w-full flex-col items-left justify-center gap-y-10 px-0 h-max py-8 bg-white/10
-      backdrop-blur-md  text-xl rounded-r-[50px]'
+        className='flex w-full flex-col items-left justify-center gap-y-10 px-0 h-max py-8 bg-black/70
+      backdrop-blur-sm rounded-r-full font-longCang text-[26px] font-medium tracking-widest'
       >
         {navData.map((link, index) => {
           return (
             <Link
               className={`${
-                link.path === pathname && 'text-accent'
+                link.path === pathname && 'text-redpinkAccent'
               } relative flex items-left group hover:text-redpinkAccent transition-all duration-300 w-auto ml-9`}
               href={link.path}
               key={index}
@@ -55,12 +55,12 @@ const Nav = () => {
               <div>{link.icon}</div>
 
               {/* tooltip */}
-              <div className='absolute pr-14 left-14'>
+              <div className='absolute pr-10 left-10'>
                 <div className=' relative flex items-center p-[6px] rounded-[3px]'>
                   <div 
                     className={`${
-                      link.path === pathname && 'text-accent'
-                    } text-[18px] leading-none`}>
+                      link.path === pathname && 'text-redpinkAccent'
+                    } leading-none`}>
                     {link.name}
                   </div>
                 </div>
