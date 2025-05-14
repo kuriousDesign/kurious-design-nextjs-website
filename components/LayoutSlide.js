@@ -9,15 +9,15 @@ export const SlideHeading = ({ text, punctuation = '.' }) => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='h2 mb-8 xl:mb-4 font-permanentMarker text-3xl xl:text-5xl'
+        className='w-full h2 mb-8 xl:mb-4 font-longCang text-5xl xl:text-7xl lowercase font-thin tracking-tight'
       >
-        {text} <span className='text-redpinkAccent'>{punctuation}</span>
+        {text}<span className='text-redpinkAccent'>{punctuation}</span>
     </motion.h2>
   )
 };
 const LayoutSlide = ({ className, children }) => {
   // Combine className with other Tailwind classes
-  const slideClass = `w-full h-full text-white text-xl flex text-center items-center justify-center ${className}`;
+  const slideClass = `w-full h-full text-white text-xl font-gothamBook flex items-center justify-center ${className}`;
 
   return <div className={slideClass}>{children}</div>;
 };

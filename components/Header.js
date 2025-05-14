@@ -72,7 +72,7 @@ const Header = () => {
               <motion.p
                 className='absolute left-9 top-10 font-longCang whitespace-nowrap  text-xl text-redpinkAccent'
                 animate={{
-                  color: ['#ff0a56','#da18f0','#1725ff'] // List of colors to cycle through
+                  color: ['#ff0a56']//,'#da18f0','#1725ff'] // List of colors to cycle through
                 }}
                 transition={{
                   duration: 34, // Duration of each color transition

@@ -71,6 +71,20 @@ const Splash = () => {
     },
   };
 
+  const enterFullScreen = () => {
+    // only enter full screen if not already in full screen and if its on mobile device  (breakbpoint xl)
+    if (window.innerWidth > 1280) {
+      return;
+    }
+    // Check if the document is already in full-screen mode
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+      });
+    }
+    //setFullScreenRequested(true);
+  };
+
 
   return (
     <div className='w-full h-full bg-blue flex overflow-hidden'>
@@ -110,7 +124,10 @@ const Splash = () => {
       </div>
       <div className='absolute w-full h-auto bottom-24 xl:bottom-14 flex justify-center gap-10 z-50'>
         <Link href={'/home'}>
-          <button className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:scale-105 ]">
+          <button 
+            className="h-[37px] w-[100px] xl:h-[45px] xl:w-[130px] rounded-full ring-2 ring-white bg-transparent text-white text-[10px] xl:text-xs font-bold font-permanentMarker hover:ring-black hover:text-black hover:scale-105 ]"
+            onClick={enterFullScreen}
+          >
             I&apos;M KURIOUS
           </button>
         </Link>
