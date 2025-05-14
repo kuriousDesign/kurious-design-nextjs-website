@@ -23,9 +23,9 @@ const Socials = () => {
 
 
   const exitFullScreenButton = (
-    <div className='fixed bottom-3 left-3 z-50 xl:hidden'>
-      <button onClick={exitFullScreen} className=' rounded-full p-2 shadow-lg hover:shadow-xl text-gray-700'>
-        <AiFillCloseCircle className='w-[24px] h-[24px]' />
+    <div className='fixed bottom-0 left-2 z-50 xl:hidden '>
+      <button onClick={exitFullScreen} className='w-[36px] h-[36px]rounded-full shadow-lg hover:shadow-xl text-white/[0.15]'>
+        <AiFillCloseCircle className='w-full h-full m-0 p-0' />
       </button>
     </div>
   );
