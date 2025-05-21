@@ -1,3 +1,6 @@
+"use client";
+import React from 'react';
+
 import ParticlesContainer from '../../components/ParticlesContainer';
 // framer motion
 import { motion } from 'framer-motion';
@@ -11,10 +14,46 @@ import ServicesList from './ServicesList';
 import SpotlightAnimation from '../../components/Spotlight';
 import Link from 'next/link';
 
-import OrientationInfo from '../../components/OrientationInfo';
+//import OrientationInfo from '../../components/OrientationInfo';
+import useGammaColor, {UseGammaColorProps} from './../../hooks/useGammaColor';
+
+// create a react component that uses the useGammaColor hook to replace motion.h2 below
+function FirstSlideTitle(){
+
+  const gammaColorProps = {
+    h: 130,
+    s: .47,
+    vMax: 1, // max value
+    vMin: 0, // min value
+  }
+
+  const {
+    color,
+    gamma,
+    deviceOrientation,
+    requestAccess,
+    isPermissionGranted,
+    isSupported,
+    error,
+  } = useGammaColor(gammaColorProps);
+
+  return (
+    <motion.h2
+      variants={fadeIn('up', 0.2)}
+      initial='hidden'
+      animate='show'
+      exit='hidden'
+      className='h2 mb-8 font-permanentMarker transition-colors duration-0'
+      style={{ color }}
+    >
+      Seek simple<span className='text-redpinkAccent'>.</span>
+    </motion.h2>
+  );
+}
 
 
 const slideFirst = (
+
   <div className='h-full bg-gray-800 py-32 text-center'>
     <div className='container mx-auto h-full flex flex-col justify-center'>
       {/* title */}
@@ -23,7 +62,8 @@ const slideFirst = (
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='h2 mb-8 font-permanentMarker'
+        className='h2 mb-8 font-permanentMarker transition-colors duration-0'
+        //style={{ color }}
       >
         Seek simple<span className='text-redpinkAccent'>.</span>
       </motion.h2>
@@ -33,10 +73,7 @@ const slideFirst = (
         <p className="font-permanentMarker my-0 h2">komplexity</p>
       </div>
     </div>
-    <div className="fixed bottom-20 left-0 flex items-center justify-center w-full">
-      <OrientationInfo />
-    </div>
-    
+
   </div>
 );
 
@@ -101,7 +138,7 @@ const slideActiveProjects = (
   <div className='w-7/8 max-w-[900px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
   <SlideHeading text="Recent Projects" />
       <p className='text-lg md:text-lg mb-10'>
-        Kurious what I&apos;ve been up to... Here is what I&apos;ve been tinkering on.
+        Kurious what I&apos;ve been up to? Here are some of my recent projects.
       </p>
       <ActiveProjectsList />
 
@@ -128,7 +165,7 @@ const slideResume = (
   <div className='w-7/8 max-w-[900px] flex flex-col justify-start items-center h-[70vh] mt-[15vh] mb-auto mx-[12vw] text-left'>
   <SlideHeading text="record of expertise" />
     <p className='text-lg md:text-lg'>
-      Check out my work and academic background using my interactive resume.
+      Explore my prior work experience and academic background.
     </p>
     <div className='mt-10 flex justify-left z-50'>
         <Link href={'/about/resume'}>

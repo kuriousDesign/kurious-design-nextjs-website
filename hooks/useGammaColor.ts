@@ -6,7 +6,7 @@ import { hsvToRgb } from "./../utils/colorFade";
 /**
  * Convert gamma orientation to interpolated RGB string
  */
-function interpolateColorFromGamma(
+export function interpolateColorFromGamma(
   gamma: number | null,
   h = 36,
   s = 0.47,
@@ -25,11 +25,19 @@ function interpolateColorFromGamma(
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// custom props for useGammaColor
+export interface UseGammaColorProps {
+  h?: number; // hue
+  s?: number; // saturation
+  vMax?: number; // max value
+  vMin?: number; // min value
+}
+
 /**
  * Hook that provides dynamic RGB color based on device orientation (gamma)
  */
 export default function useGammaColor(
-  options?: { h?: number; s?: number; vMax?: number; vMin?: number }
+  props?: { h: number; s: number; vMax: number; vMin: number } | UseGammaColorProps
 ) {
   const {
     deviceOrientation,
@@ -42,10 +50,10 @@ export default function useGammaColor(
   const gamma = isPermissionGranted && isSupported ? deviceOrientation.gamma : null;
   const color = interpolateColorFromGamma(
     gamma,
-    options?.h,
-    options?.s,
-    options?.vMax,
-    options?.vMin
+    props?.h,
+    props?.s,
+    props?.vMax,
+    props?.vMin
   );
 
   return {
